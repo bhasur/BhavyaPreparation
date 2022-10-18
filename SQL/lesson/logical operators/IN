@@ -1,0 +1,14 @@
+The SQL Server (Transact-SQL) IN Operator is used to specify multiple values in a WHERE clause of SQL Server statement. It is a shorthand for multiple OR conditions.
+
+Syntax
+The syntax for using IN operator in SQL Server (Transact-SQL) is given below:
+
+SELECT column1, column2, column3, ...
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+
+Example:
+To select all records of the Employee table where City is London, Paris or Amsterdam, the query is given below.
+
+SELECT * FROM Employee
+WHERE City IN ('London', 'Paris', 'Amsterdam');
