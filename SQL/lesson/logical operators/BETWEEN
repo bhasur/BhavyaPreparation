@@ -1,0 +1,14 @@
+The SQL Server (Transact-SQL) BETWEEN Operator is used to specify a range in a WHERE clause of a SQL Server statement. It is a shorthand for >= AND <=. It is a inclusive operator and includes start and end value while specifying the range.
+
+Syntax
+The syntax for using BETWEEN operator in SQL Server (Transact-SQL) is given below:
+
+SELECT column1, column2, column3, ...
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+Example:
+To select all records of the Employee table where Salary is between 2800 and 3000, the query is given below.
+
+SELECT * FROM Employee
+WHERE Salary BETWEEN 2800 AND 3000;
