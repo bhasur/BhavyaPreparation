@@ -1,0 +1,18 @@
+The SQL Server (Transact-SQL) EXISTS Operator is used to test the existence of records from a subquery. It returns true if the subquery returns one or more records, else returns false.
+
+Syntax
+The syntax for using EXISTS operator in SQL Server (Transact-SQL) is given below:
+
+SELECT column1, column2, column3, ...
+FROM table_name
+WHERE EXISTS 
+(SELECT column_name FROM table_name
+WHERE condition);
+
+Example:
+The below SQL Server statement returns TRUE and records of female employees from Employee table.
+
+SELECT * FROM Employee
+WHERE EXISTS 
+(SELECT EmpID FROM Contact_Info 
+WHERE Employee.EmpID = Contact_Info.EmpID AND Gender = 'F');
