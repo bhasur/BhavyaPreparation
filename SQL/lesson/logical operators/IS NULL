@@ -15,3 +15,9 @@ To select all records of the Employee table where Age is null, the query is give
 
 SELECT * FROM Employee
 WHERE Age IS NULL;
+
+
+To fetch all records of the Employee table where Age is not null, the query is mentioned below:
+
+SELECT * FROM Employee
+WHERE Age IS NOT NULL;
