@@ -1,0 +1,17 @@
+A field with no value is called a field with NULL value. 
+To test the NULL value of a field, SQL Server (Transact-SQL) IS NULL operator is used. 
+It returns TRUE if a NULL value is found, otherwise it returns FALSE.
+
+Syntax
+
+The syntax for using IS NULL operator in SQL Server (Transact-SQL) is given below:
+
+SELECT column1, column2, column3, ...
+FROM table_name
+WHERE column_name IS NULL;
+
+Example:
+To select all records of the Employee table where Age is null, the query is given below.
+
+SELECT * FROM Employee
+WHERE Age IS NULL;
