@@ -1,0 +1,22 @@
+The SQL Server (Transact-SQL) / (divide) operator is used to divide two values. It operates on numerical values.
+
+Using with WHERE Clause: To select records of table where division of Var1 column value by Var2 column value is greater than 6.0, the query is given below.
+
+SELECT * FROM Sample
+WHERE Var1 / Var2 > 6.0;
+
+Using with AS Clause: The division of Var1 column value by Var2 column value can be displayed in a different column using AS clause:
+
+SELECT *, (Var1 / Var2) AS Division FROM Sample;
+
+Using with UPDATE Clause: To update the column Var1 with the division of Var1 column value by Var2 column value, the query is given below:
+
+UPDATE Sample
+SET Var1 = Var1 / Var2;
+
+--See result
+SELECT * FROM Sample;
+
+Using with values: To divide two values, we can simply use SELECT statement:
+
+SELECT 50 / 25;
