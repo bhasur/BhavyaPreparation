@@ -1,0 +1,17 @@
+The SQL Server (Transact-SQL) SELECT DISTINCT statement is used to select different (distinct) data from a database table. It eliminates any duplicate records and fetches only unique records.
+
+Syntax
+The syntax for using DISTINCT keyword in SQL Server (Transact-SQL) is given below:
+
+SELECT DISTINCT column1, column2, ....
+FROM table_name;
+
+Example:
+
+To fetch distinct Salary data of the employees present in the Employee table, the query is:
+
+SELECT DISTINCT Salary FROM Employee;
+
+To fetch distinct Age data of the employees present in the Employee table, the query is:
+
+SELECT DISTINCT Age FROM Employee;
