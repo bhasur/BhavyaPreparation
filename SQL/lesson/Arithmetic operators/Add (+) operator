@@ -1,0 +1,24 @@
+The SQL Server (Transact-SQL) + (add) operator is used to add two values. It operates on numerical values.
+
+Example:
+
+Using with WHERE Clause: To select records of table where sum of Var1 and Var2 column values is greater than 25, the query is given below:
+
+SELECT * FROM Sample
+WHERE Var1 + Var2 > 25;
+
+Using with AS Clause: The sum of Var1 and Var2 column values can be displayed in a different column using AS clause:
+
+SELECT *, (Var1 + Var2) AS SUM FROM Sample;
+
+Using with UPDATE Clause: To update the column Var1 with the sum of columns Var1 and Var2, the query is given below:
+
+UPDATE Sample
+SET Var1 = Var1 + Var2;
+
+--See result
+SELECT * FROM Sample;
+
+Using with values: To add two values, we can simply use SELECT statement:
+
+SELECT 30 + 50;
