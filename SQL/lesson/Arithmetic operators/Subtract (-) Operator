@@ -1,0 +1,24 @@
+The SQL Server (Transact-SQL) - (subtract) operator is used to subtract two values. It operates on numerical values.
+
+Example:
+
+Using with WHERE Clause: To select records of table where difference of Var1 and Var2 column values is greater than 20, the query is given below.
+
+SELECT * FROM Sample
+WHERE Var1 - Var2 > 20;
+
+Using with AS Clause: The difference of Var1 and Var2 column values can be displayed in a different column using AS clause:
+
+SELECT *, (Var1 - Var2) AS Diff FROM Sample;
+
+Using with UPDATE Clause: To update the column Var1 with the difference of columns Var1 and Var2, the query is given below:
+
+UPDATE Sample
+SET Var1 = Var1 - Var2;
+
+--See result
+SELECT * FROM Sample;
+
+Using with values: To subtract two values, we can simply use SELECT statement:
+
+SELECT 50 - 30;
