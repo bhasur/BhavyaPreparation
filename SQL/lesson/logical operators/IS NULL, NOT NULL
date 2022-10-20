@@ -2,6 +2,12 @@ A field with no value is called a field with NULL value.
 To test the NULL value of a field, SQL Server (Transact-SQL) IS NULL operator is used. 
 It returns TRUE if a NULL value is found, otherwise it returns FALSE.
 
+----------------------------------------
+
+A field with no value is called a field with NULL value. 
+To test the non-NULL value of a field, SQL Server (Transact-SQL) IS NOT NULL operator is used. 
+It returns TRUE if a non-NULL value is found, otherwise it returns FALSE.
+
 Syntax
 
 The syntax for using IS NULL operator in SQL Server (Transact-SQL) is given below:
