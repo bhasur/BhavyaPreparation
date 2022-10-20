@@ -1,0 +1,25 @@
+The SQL Server (Transact-SQL) SELECT statement is used to select data from a database table and the selected data is returned in the form of a table.
+
+Syntax
+The syntax for using SELECT statement in different scenarios in SQL Server (Transact-SQL) are given below:
+
+/*select one column*/
+SELECT column1 FROM table_name;
+
+/*select multiple columns*/
+SELECT column1, column2, ... 
+FROM table_name;
+
+/*select all columns of a table*/
+SELECT * FROM table_name;
+
+
+Example:
+
+To fetch Name and Salary data of the employees present in the Employee table, the query is:
+
+SELECT Name, Salary FROM Employee;
+
+To fetch all fields of the Employee table, the query will be:
+
+SELECT * FROM Employee;
