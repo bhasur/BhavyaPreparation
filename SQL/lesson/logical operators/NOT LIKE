@@ -1,0 +1,44 @@
+The SQL Server (Transact-SQL) NOT LIKE operator is the negation of LIKE operator. 
+The LIKE operator is used in a WHERE clause to search for a specified pattern in a specified column. 
+The wildcards which are used in conjunction with the LIKE or NOT LIKE operator are given below:
+
+Wildcard Characters in SQL Server
+Symbol	Description	Example
+%	: Represents zero, one or multiple characters.	'J%' represents a value that start with "J", for example - John, Jo and Jack etc.
+_	 : Represents one character.	'_o%' represents a value that have "o" in the second position, for example - John, Jo and Journey etc.
+[] :Represents any single character specified within [].	'[ack]%' represents a value that starts with a, c or k, for example - ant, cat or kite etc.
+-	: Represents a range of characters.	'[a-d]%' represents a value that starts with a, b, c or d, for example - ant, bat, cat or dog etc.
+[^]	: Represents any character not specified within [].	'[^ack]%' represents a value that does not start with a, c or k, for example - bat, dog or rat etc.
+
+Syntax:
+SELECT column1, column2, ...
+FROM table_name
+WHERE column NOT LIKE pattern;
+
+
+Example:
+Using the % Wildcard : To select all records of the Employee table with Name starting with 'Jo', the query is given below.
+
+SELECT * FROM Employee
+WHERE Name LIKE 'Jo%';
+This will produce the result as shown below:
+
+
+Using the % Wildcard with NOT LIKE operator: NOT LIKE operator is used as the negation of LIKE operator.
+For example, to select all records of the Employee table with Name not starting with 'Jo', the following query can be used:
+
+SELECT * FROM Employee
+WHERE Name NOT LIKE 'Jo%';
+This will produce the result as shown below:
+
+Using the _ Wildcard : To select all records of the Employee table with Name containing 'o' as second character, the query is mentioned below.
+
+SELECT * FROM Employee
+WHERE Name LIKE '_o%';
+The result of the above code will be:
+
+
+Using the _ Wildcard with NOT LIKE operator: To select all records of the Employee table with Name not containing 'o' as second character, the query is given below:.
+
+SELECT * FROM Employee
+WHERE Name NOT LIKE '_o%';
