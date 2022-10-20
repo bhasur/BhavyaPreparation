@@ -1,0 +1,12 @@
+The SQL Server (Transact-SQL) !> (not greater than) operator checks if the value of left operand is not greater than the value of right operand and returns true if the condition is true, false otherwise.
+
+Syntax
+The syntax for using not greater than operator in SQL Server (Transact-SQL) is given below:
+
+expression !> expression
+
+To select records of table where Age of the person is not greater than 27, the query is given below.
+
+SELECT * FROM Employee
+WHERE Age !> 27;
+
