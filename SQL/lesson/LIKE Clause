@@ -1,0 +1,21 @@
+The SQL Server (Transact-SQL) LIKE clause is used in a WHERE clause to search for a specified pattern in a specified column. 
+The wildcards which are used in conjunction with the LIKE clause are given below:
+
+Wildcard Characters in SQL Server
+Symbol	Description	Example
+%	Represents zero, one or multiple characters.	'J%' represents a value that start with "J", for example - John, Jo and Jack etc.
+_	Represents one character.	'_o%' represents a value that have "o" in the second position, for example - John, Jo and Journey etc.
+[]	Represents any single character specified within [].	'[ack]%' represents a value that starts with a, c or k, for example - ant, cat or kite etc.
+-	Represents a range of characters.	'[a-d]%' represents a value that starts with a, b, c or d, for example - ant, bat, cat or dog etc.
+[^]	Represents any character not specified within [].	'[^ack]%' represents a value that does not start with a, c or k, for example - bat, dog or rat etc.
+
+Syntax
+The syntax for using LIKE Clause in SQL Server (Transact-SQL) is given below:
+
+SELECT column1, column2, ...
+FROM table_name
+WHERE column LIKE pattern;
+
+Examples:
+ 
+ 
