@@ -20,3 +20,20 @@ To fetch all fields of the Employee table sorted by Age (ascending order) and Em
 
 SELECT * FROM Employee
 ORDER BY Age ASC, EmpID DESC;
+
+
+Using ORDER BY with CASE Statement
+To fetch the rows with their own preferred order, the CASE statement can be used with ORDER BY statement as shown below:
+
+To fetch the Employee table sorted by City (as defined in CASE statement), the query is:
+
+SELECT * FROM Employee
+ORDER BY (
+  CASE City
+    WHEN 'New York' THEN 1
+    WHEN 'London' THEN 2
+    WHEN 'Amsterdam' THEN 3
+    WHEN 'Paris' THEN 4
+    ELSE 5
+  END
+)ASC, Salary DESC;
