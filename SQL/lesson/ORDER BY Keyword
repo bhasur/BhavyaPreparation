@@ -1,0 +1,22 @@
+The SQL Server (Transact-SQL) ORDER BY keyword is used to sort the result table in ascending or descending order. 
+By default, ORDER BY keyword sorts the result in ascending order, however it can be specified using ASC keyword. 
+To sort the result in descending order, DESC keyword is used.
+
+Syntax
+The syntax for using ORDER BY keyword in SQL Server (Transact-SQL) is given below:
+
+SELECT column1, column2, column3, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+
+Example:
+
+To fetch the Employee table sorted by Age (ascending order), the query is:
+
+SELECT * FROM Employee
+ORDER BY Age ASC;
+
+To fetch all fields of the Employee table sorted by Age (ascending order) and EmpID (descending order), the query will be:
+
+SELECT * FROM Employee
+ORDER BY Age ASC, EmpID DESC;
