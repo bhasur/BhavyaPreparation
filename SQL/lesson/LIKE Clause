@@ -18,4 +18,34 @@ WHERE column LIKE pattern;
 
 Examples:
  
- 
+Using the % Wildcard : To select all records of the Employee table with Name starting with 'Jo', the query is given below.
+
+SELECT * FROM Employee
+WHERE Name LIKE 'Jo%';
+
+Using the % Wildcard with NOT LIKE operator: NOT LIKE operator is used as the negation of LIKE operator. 
+For example, to select all records of the Employee table with Name not starting with 'Jo', the following query can be used:
+
+SELECT * FROM Employee
+WHERE Name NOT LIKE 'Jo%';
+
+Using the _ Wildcard : To select all records of the Employee table with Name containing 'o' as second character, the query is mentioned below.
+
+SELECT * FROM Employee
+WHERE Name LIKE '_o%';
+
+Using the [] Wildcard : To select all records of the Employee table with Name starting with 'K', 'R' or 'M', the query is:
+
+SELECT * FROM Employee
+WHERE Name LIKE '[KRM]%';
+
+Using the ^ Wildcard : To select all records of the Employee table with Name not starting with 'K', 'R' or 'M', the query is:
+
+SELECT * FROM Employee
+WHERE Name LIKE '[^KRM]%';
+
+
+Using the - Wildcard : To select all records of the Employee table with Name starting with 'G' to 'J', the query is:
+
+SELECT * FROM Employee
+WHERE Name LIKE '[G-J]%';
