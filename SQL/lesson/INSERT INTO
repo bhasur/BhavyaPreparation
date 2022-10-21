@@ -1,0 +1,67 @@
+The SQL Server (Transact-SQL) INSERT INTO statement is used to insert a new record in a table. 
+There are two ways of using INSERT INTO statement which are mentioned below.
+
+Syntax
+The below syntax specifies column names and respective values to be inserted.
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+The below syntax specifies values only. Therefore, it is essential to specify values in the same order as the columns in the table.
+
+INSERT INTO table_name 
+VALUES (value1, value2, value3, ...);
+
+Example:
+
+Using below query, two new records are added in the Employee table:
+
+INSERT INTO Employee (EmpID, Name, City, Age, Salary)
+VALUES (7, 'Suresh', 'Mumbai', 29, 2900);
+INSERT INTO Employee 
+VALUES (8, 'Zayne', 'Oslo', 31, 3400);
+
+-- see the result
+SELECT * from Employee
+
+
+Insert Data Only in Specified Columns: To insert data in specified columns, it is necessary to specify column names. See the query given below:
+
+INSERT INTO Employee (EmpID, Name, Age)
+VALUES (7, 'Suresh', 29);
+
+-- see the result
+SELECT * from Employee
+
+
+Populate one table using another table
+A table can be populated using another table by using INSERT INTO SELECT statement. 
+Please note that the other table should have the set of fields which are required to populate in the first table.
+
+Syntax
+The syntax for using INSERT INTO SELECT statement in SQL Server (Transact-SQL) is given below:
+
+INSERT INTO table1 [(column1, column2, ...)] 
+SELECT column1, column2, ...  FROM table2
+[WHERE condition];
+
+Consider a database containing tables called Employee and HREmployee with the following records:
+
+Table 1: Employee table
+
+Table 2: HREmployee table
+
+The HREmployee table contains no records and have following fields - HRID, Name and Address.
+
+The given fields of HREmployee table can be populated using Employee table by using below query:
+
+INSERT INTO HREmployee (HRID, Name, Address)
+SELECT EmpID, Name, City FROM Employee
+WHERE EmpID IN (1, 4, 5);
+
+-- see the result
+SELECT * from HREmployee
+
+
+
+
+
