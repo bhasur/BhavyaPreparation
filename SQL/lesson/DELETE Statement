@@ -1,0 +1,27 @@
+The SQL Server (Transact-SQL) DELETE statement is used to delete the existing records from a table. A WHERE clause can be used with the DELETE statement to delete the selected rows, otherwise all records will be deleted.
+
+Syntax
+The syntax for using DELETE statement in SQL Server (Transact-SQL) is given below:
+
+DELETE FROM table_name
+WHERE condition(s);
+
+
+Example:
+
+To delete the records of an employee whose EmpID is 5, the statement is given below:
+
+DELETE FROM Employee
+WHERE EmpID = 5;
+
+-- see the result
+SELECT * from Employee;
+
+
+Similarly, to delete the records of an employee where city starts with 'New', the statement will be:
+
+DELETE FROM Employee
+WHERE City LIKE 'New%';
+
+-- see the result
+SELECT * from Employee;
