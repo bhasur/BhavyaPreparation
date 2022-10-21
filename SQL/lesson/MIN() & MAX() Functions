@@ -1,0 +1,64 @@
+The SQL Server (Transact-SQL) MIN() function returns the minimum value of an expression or specified column of a table. 
+Similarly, the SQL Server (Transact-SQL) MAX() function returns the maximum value of an expression or specified column of a table.
+
+Syntax
+/* Using MIN() Function */
+SELECT MIN(column_name) 
+FROM table_name
+WHERE condition(s);
+
+/* Using MAX() Function */
+SELECT MAX(column_name) 
+FROM table_name
+WHERE condition(s);
+
+
+/* Using GROUP BY with MAX() Function */
+SELECT column1, column2, ...
+       MIN(column_name) 
+FROM table_name
+WHERE condition(s)
+GROUP BY column1, column2, ...;
+
+/* Using GROUP BY with MAX() Function */
+SELECT column1, column2, ...
+       MAX(column_name) 
+FROM table_name
+WHERE condition(s)
+GROUP BY column1, column2, ...;
+
+
+Example - With Single Column
+
+To fetch minimum Salary of the employees present in the Employee table, the query will be:
+
+SELECT MIN(Salary) AS MinSalary 
+FROM Employee;
+
+To fetch maximum Salary of the employees present in the Employee table, the following query can be used:
+
+SELECT MAX(Salary) AS MaxSalary 
+FROM Employee;
+
+
+Example - Using GROUP BY
+
+
+To fetch the minimum Salary of the employees group by their age, where age is greater than 27, the following query can be used:
+
+SELECT Age, MIN(Salary) AS MinSalary 
+FROM Employee
+WHERE Age > 27
+GROUP BY Age;
+
+
+To fetch the maximum Salary of the employees group by their age, where age is greater than 27, the query will be:
+
+SELECT Age, MAX(Salary) AS MaxSalary 
+FROM Employee
+WHERE Age > 27
+GROUP BY Age;
+
+
+
+
