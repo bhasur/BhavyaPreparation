@@ -1,0 +1,28 @@
+The SQL Server (Transact-SQL) GROUP BY keyword is used to arrange result table into identical groups with the help of aggregate functions 
+(COUNT, MAX, MIN, SUM, AVG etc). The GROUP BY keyword follows the WHERE clause in a SELECT statement and precedes the ORDER BY keyword.
+
+Syntax
+The syntax for using GROUP BY Keyword in SQL Server (Transact-SQL) is given below:
+
+SELECT column1, column2
+FROM table_name
+WHERE condition(s)
+GROUP BY column1, column2
+ORDER BY column1, column2;
+
+Example:
+
+GROUP BY single column: To find the number of employee present in the Employee table in different age group sorted by Age (descending order), the query is:
+
+SELECT Age, Count(Name) AS Number_of_Employee
+FROM Employee
+GROUP BY Age
+ORDER BY Age DESC;
+
+
+GROUP BY multiple columns: To find the average salary of employees present in the Employee table ordered by City and Age, the query is:
+
+SELECT City, Age, AVG(Salary) AS AverageSalary
+FROM Employee
+GROUP BY City, Age
+ORDER BY City, Age;
