@@ -1,0 +1,39 @@
+The SQL Server (Transact-SQL) EXCEPT clause is used to compare the result-sets of two or more SELECT statements. 
+It returns all records from the first result-set that do not appear in the second result-set.
+
+While using EXCEPT clause, the following criteria must be satisfied:
+
+Number of columns in each SELECT statement should equal.
+Datatype of columns in each SELECT statement should match.
+Order of columns in each SELECT statement should match.
+
+Syntax
+The syntax for using EXCEPT clause in SQL Server (Transact-SQL) is given below:
+
+SELECT column1, column2, ... FROM table1
+EXCEPT
+SELECT column1, column2, ... FROM table2
+
+
+Example:
+Using EXCEPT clause: To get the records of Name column which are not present in both record-sets, the following query can be used:
+
+SELECT Name FROM Product
+EXCEPT
+SELECT Name FROM Inventory
+ORDER BY Name;
+
+Using EXCEPT clause with WHERE clause: To fetch the records of Name column which are not present in both record-sets with the specified condition, the following query can be used:
+
+SELECT Name FROM Product
+EXCEPT
+SELECT Name FROM Inventory
+WHERE Quantity < 30
+ORDER BY Name;
+
+Using EXCEPT clause with multiple columns: To fetch the records of Name and Brand columns which are not present in both record-sets, the following query can be used:
+
+SELECT Name, Brand FROM Product
+EXCEPT
+SELECT Name, Brand FROM Inventory
+ORDER BY Name;
