@@ -1,0 +1,125 @@
+In SQL Server (Transact-SQL) Subquery is a query within another SQL Server query and embedded within the WHERE clause. 
+It is used to return data which is used in the main query as a condition to further restrict the data to be retrieved.
+
+A Subquery can be used with SELECT, UPDATE, INSERT, DELETE statements along with expression operator. 
+It could be equality operator or comparison operator such as =, >, =, <= and Like operator.
+
+There are a few rules that a subquery must follow:
+
+A subquery must be enclosed within parentheses.
+A subquery can be placed in a number of SQL Server clauses: WHERE clause, HAVING clause, FROM clause.
+A subquery is a query within another query. The outer query is known as the main query, and the inner query is known as a subquery.
+The subquery generally executes first, and its output is used to complete the query condition for the main or outer query.
+An ORDER BY command cannot be used in a subquery, although the main query can use an ORDER BY. The GROUP BY command can be used to perform the same function as the ORDER BY in a subquery.
+Subqueries are on the right side of the comparison operator.
+A subquery can have only one column in the SELECT clause, unless multiple columns are in the main query for the subquery to compare its selected columns.
+A subquery which returns more than one row can only be used with multiple value operators such as the IN operator.
+The BETWEEN operator cannot be used with a subquery. However, the BETWEEN operator can be used within the subquery.
+Subquery with the SELECT Statement
+SQL Server (Transact-SQL) subqueries are most frequently used with the SELECT statement.
+
+Syntax
+SELECT column_name  
+FROM table_name  
+WHERE column_name expression operator   
+( SELECT column_name  from table_name WHERE ... ); 
+
+
+Example:
+A subquery with SELECT statement will be:
+
+SELECT * FROM Employee
+  WHERE EmpID IN (SELECT EmpID   
+    FROM Employee   
+    WHERE Salary > 2800);
+    
+    
+ Subquery with the INSERT Statement
+
+A SQL Server (Transact-SQL) subquery can also be used with the INSERT statement. 
+In the insert statement, data returned from the subquery is used to insert into another table. 
+The selected data in the subquery can be modified with any of the character, date or number functions.
+
+Syntax
+
+INSERT INTO table_name (column1, column2, column3....)   
+SELECT *  
+FROM table_name  
+WHERE VALUE OPERATOR  
+Example:
+Consider a table Employee_Temp with similar structure as Employee table. 
+To copy the complete Employee table into the Employee_Temp table, the following query can be used:
+
+INSERT INTO Employee_Temp  
+   SELECT * FROM Employee   
+   WHERE EmpID IN (SELECT EmpID   
+   FROM Employee);  
+
+
+Subquery with the UPDATE Statement
+
+A SQL Server (Transact-SQL) subquery can also be used in conjunction with the UPDATE statement.
+Either single or multiple columns in a table can be updated when using a subquery with the UPDATE statement.
+
+Syntax
+UPDATE table  
+SET column_name = new_value  
+WHERE VALUE OPERATOR  
+   (SELECT COLUMN_NAME  
+   FROM TABLE_NAME  
+   WHERE condition);     
+    
+A subquery with UPDATE statement will be:
+
+UPDATE Employee  
+  SET Salary = Salary * 1.2  
+  WHERE Salary IN (SELECT Salary FROM Employee  
+    WHERE Salary <= 2800);  
+
+--see the result
+SELECT * FROM Employee;
+
+
+
+Subquery with the DELETE Statement
+A SQL Server (Transact-SQL) subquery can also be used in conjunction with the DELETE statement like with any other statements mentioned above.
+
+Syntax
+DELETE FROM TABLE_NAME  
+WHERE VALUE OPERATOR  
+   (SELECT COLUMN_NAME  
+   FROM TABLE_NAME  
+   WHERE condition); 
+   
+   
+   
+   A subquery with UPDATE statement will be:
+
+DELETE FROM Employee  
+  WHERE Age IN (SELECT Age FROM Employee  
+  WHERE Age >= 28 );  
+
+--see the result
+SELECT * FROM Employee;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
