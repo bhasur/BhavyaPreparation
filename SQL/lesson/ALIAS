@@ -1,0 +1,45 @@
+The SQL Server (Transact-SQL) ALIAS statement is used to provide a temporary name to a column of a table, aggregate function column or a table itself. A alias name exists for only for the duration of the query. It facilitates easy to understand names and hence increases readability of a SQL Server code.
+
+Syntax
+The syntax for using ALIAS statement in SQL Server (Transact-SQL) is given below:
+
+/* Using ALIAS with a column of a table */
+SELECT column_name AS alias_name
+FROM table_name;
+
+/* Using ALIAS with an aggregate function */
+SELECT SUM(column_name) AS alias_name
+FROM table_name
+WHERE condition(s);
+
+/* Using ALIAS with a table */
+SELECT alias_name_1.column1, alias_name_2.column1, ...
+FROM table1 AS alias_name_1
+INNER JOIN table2 AS alias_name_2
+ON alias_name_1.matching_column = alias_name_2.matching_column;
+
+
+Example:
+
+ALIAS with a column: The below mentioned query is used to create a aliases of columns - name and City of the Employee table.
+
+SELECT Name AS [Employee Name], Age AS [Employee Age], City 
+FROM Employee;
+
+
+ALIAS with an aggregate function: The below mentioned query is used to fetch the number of employees whose age is greater than 27.
+
+SELECT COUNT(Name) AS [Number of Employees]
+FROM Employee
+WHERE Age > 27;
+
+
+ALIAS with a table: To inner join Employee and Contact_Info tables based on matching column EmpID, the statement is given below. 
+While performing inner join of two tables, aliases of tables are used.
+
+SELECT A.Name, A.Age, B.Address 
+FROM Employee AS A
+INNER JOIN Contact_Info AS B
+ON A.EmpID = B.EmpID;
+
+
