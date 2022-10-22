@@ -1,0 +1,43 @@
+The SQL Server (Transact-SQL) INTERSECT clause is used to return the intersection of result-set of two or more SELECT statements. 
+If a record exists in both result-sets, it will be included in the INTERSECT results. 
+However, if a record exists in one result-set and not in the other, it will be removed from the INTERSECT results.
+
+While using INTERSECT clause, the following criteria must be satisfied:
+
+Number of columns in each SELECT statement should equal.
+Datatype of columns in each SELECT statement should match.
+Order of columns in each SELECT statement should match.
+
+Syntax
+The syntax for using INTERSECT clause in SQL Server (Transact-SQL) is given below:
+
+SELECT column1, column2, ... FROM table1
+INTERSECT
+SELECT column1, column2, ... FROM table2
+
+
+Example:
+
+Using INTERSECT clause: To get the records of Name column which are present in both record-sets, the following query can be used:
+
+SELECT Name FROM Product
+INTERSECT
+SELECT Name FROM Inventory
+ORDER BY Name;
+
+
+Using INTERSECT clause with WHERE clause: To fetch the records of Name column which are present in both record-sets with the specified condition, the following statement can be used:
+
+SELECT Name FROM Product
+INTERSECT
+SELECT Name FROM Inventory
+WHERE Quantity < 30
+ORDER BY Name;
+
+
+Using INTERSECT clause with multiple columns: To fetch the records of Name and Brand columns which are present in both record-sets, the query will be:
+
+SELECT Name, Brand FROM Product
+INTERSECT
+SELECT Name, Brand FROM Inventory
+ORDER BY Name;
