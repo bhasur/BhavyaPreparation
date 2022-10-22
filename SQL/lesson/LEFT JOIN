@@ -1,0 +1,27 @@
+The SQL Server (Transact-SQL) LEFT JOIN keyword (or sometimes called LEFT OUTER JOIN) is used to combine column values of two tables based 
+on the match between the columns. It returns all rows of the table on the left side of the join and matching rows of the table on the right side of the join. 
+The rows of the left side table where there is no match in the right side table, the result table will contain NULL value.
+
+Syntax
+The syntax for using LEFT JOIN keyword in SQL Server (Transact-SQL) is given below:
+
+SELECT table1.column1, table1.column2, table2.column1, table2.column2, ...
+FROM table1
+LEFT JOIN table2
+ON table1.matching_column = table2.matching_column;
+
+Example:
+
+To left join Employee and Contact_Info tables based on matching column EmpID, the query is given below. This will fetch Name and Age columns from Employee table and Address column from Contact_Info table.
+
+SELECT Employee.Name, Employee.Age, Contact_Info.Address 
+FROM Employee
+LEFT JOIN Contact_Info
+ON Employee.EmpID = Contact_Info.EmpID;
+
+To fetch all fields of a table, table.* keyword is used, for example - to fetch all fields of the Employee table, Employee.* is used in the below query:
+
+SELECT Employee.*, Contact_Info.Address 
+FROM Employee
+LEFT JOIN Contact_Info
+ON Employee.EmpID = Contact_Info.EmpID;
