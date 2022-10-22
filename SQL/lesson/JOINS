@@ -1,0 +1,13 @@
+The SQL Server (Transact-SQL) JOIN clause is used to combine rows of two or more tables based on common column between them. There are four types of JOINs in SQL:
+
+INNER JOIN: It is sometimes called simple JOIN. It returns records based on matching rows in both tables.
+LEFT JOIN: It is sometimes called LEFT OUTER JOIN. It returns records which contains all rows from left table and matching rows from right tables.
+RIGHT JOIN: It is sometimes called RIGHT OUTER JOIN. It returns records which contains all rows from right table and matching rows from left tables.
+FULL JOIN: It is sometimes called FULL OUTER JOIN. It returns records which contains all rows from both tables.
+
+The JOIN clause is used with Employee and Contact_Info tables based on common column EmpID. It returns Name, Age and Address columns based on match in both tables. The query is given below:
+
+SELECT Employee.Name, Employee.Age, Contact_Info.Address 
+FROM Employee
+JOIN Contact_Info
+ON Employee.EmpID = Contact_Info.EmpID;
