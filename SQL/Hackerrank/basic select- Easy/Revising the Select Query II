@@ -1,0 +1,4 @@
+Question:https://www.hackerrank.com/challenges/revising-the-select-query-2/problem
+
+Sol:
+Select Name from city where countrycode ='USA' and POPULATION > 120000
