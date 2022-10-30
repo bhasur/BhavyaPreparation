@@ -1,0 +1,5 @@
+Questions:
+https://www.hackerrank.com/challenges/weather-observation-station-4/problem
+
+Sol:
+Select count(city) - Count(distinct city) from station
