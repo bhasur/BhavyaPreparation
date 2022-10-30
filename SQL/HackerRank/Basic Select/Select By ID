@@ -1,4 +1,0 @@
-Question: https://www.hackerrank.com/challenges/select-by-id/problem
-
-Solution:
-Select * from City where ID = 1661
