@@ -1,0 +1,6 @@
+Question:
+ https://www.hackerrank.com/challenges/weather-observation-station-8/problem
+ 
+ Sol:
+ SELECT distinct CITY FROM STATION WHERE CITY LIKE '[AEIOU]%[AEIOU]';
+ 
