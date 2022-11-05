@@ -1,0 +1,11 @@
+Questions:https://www.hackerrank.com/challenges/binary-search-tree-1/problem?isFullScreen=true
+
+Sol:
+Select N,
+Case
+when P is NULL then 'Root'
+When N  IN (Select distinct P from bst) then 'INNER'
+else 'LEAF'
+end 
+from BST
+Order By N;
