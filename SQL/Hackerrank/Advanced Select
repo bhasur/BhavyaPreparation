@@ -1,0 +1,19 @@
+Questions:https://www.hackerrank.com/challenges/the-company/problem?isFullScreen=true
+
+Sol:
+
+Select 
+     c.Company_code,
+     c.founder,
+     COunt(distinct lm.lead_manager_code),
+     COunt(distinct sm.senior_manager_code ),
+     COunt(distinct m.manager_code),
+     COunt(distinct e.employee_code)
+from 
+      company c
+INNER JOIN Lead_manager lm on lm.Company_code = c.Company_code
+INNER JOIN Senior_Manager sm on sm.Company_code = c.Company_code
+INNER JOIN manager m on m.Company_code = c.Company_code
+INNER JOIN employee e on e.Company_code = c.Company_code
+group by c.Company_code, c.founder
+order by c.Company_code
