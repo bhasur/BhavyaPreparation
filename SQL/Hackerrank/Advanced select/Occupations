@@ -1,0 +1,9 @@
+Questions: https://www.hackerrank.com/challenges/occupations/problem?isFullScreen=true
+
+Sol: 
+Select [Doctor],[Professor],[Singer],[Actor]
+From (
+Select Occupation,NAme,Row_Number() OVer(Partition By Occupation ORder by NAme) rn From Occupations
+) table1
+Pivot 
+(Max(NAme) For Occupation in ([Doctor],[Professor],[Singer],[Actor])) table2
