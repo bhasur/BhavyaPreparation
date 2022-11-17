@@ -1,0 +1,6 @@
+Q: Show the total amount of male patients and the total amount of female patients in the patients table.
+Display the two results in the same row.
+
+Sol: Select 
+(Select COunt(*) from patients where gender = 'M') as male_count,
+(Select COunt(*) from patients where gender = 'F') as female_count
