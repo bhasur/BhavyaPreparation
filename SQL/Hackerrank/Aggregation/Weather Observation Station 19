@@ -1,0 +1,15 @@
+Q: https://www.hackerrank.com/challenges/weather-observation-station-19/problem
+
+Sol: 
+
+with p1 as (
+    select min( LAT_N  ) a, max( LAT_N  ) b
+    from station
+), p2 as (
+    select min( LONG_W  ) c, max( LONG_W  ) d
+    from station
+)
+select
+cast ( sqrt( (a-c)*(a-c) + (b-d)*(b-d) ) as numeric(20,4))
+from
+p1,p2
