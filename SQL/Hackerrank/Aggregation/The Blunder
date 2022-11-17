@@ -1,4 +1,0 @@
-Q: https://www.hackerrank.com/challenges/the-blunder/problem?isFullScreen=true
-
-
-SOl: select CEILING(AVG(CAST(Salary as decimal)) - AVG(CONVERT(Decimal,replace( CONVERT(varchar, Salary),'0','')))) from Employees
