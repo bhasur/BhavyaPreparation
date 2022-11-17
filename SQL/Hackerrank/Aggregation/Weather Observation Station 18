@@ -1,3 +1,3 @@
 Q: https://www.hackerrank.com/challenges/weather-observation-station-18/problem
 
-Sol: select cast((min(long_w) + max(long_w)) - (min(lat_n) + max(lat_n)) as numeric(10,4)) from station;
+Sol: select str(abs(min(lat_n)-min(long_w)) + abs(max(lat_n)-max(long_w)), 12, 4) from station;
