@@ -1,3 +1,0 @@
-1. Show first name, last name, and gender of patients who's gender is 'M'
-
-Sol: Select first_name,last_name, gender from patients where gender = 'M'
