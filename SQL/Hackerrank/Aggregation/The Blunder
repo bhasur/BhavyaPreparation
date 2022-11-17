@@ -1,0 +1,5 @@
+Q:https://www.hackerrank.com/challenges/the-blunder/problem
+
+SOl:
+
+SELECT CAST(CEILING(AVG(CAST(Salary As float))-AVG(CAST(REPLACE(Salary,'0','') As float))) As int) FROM EMPLOYEES
