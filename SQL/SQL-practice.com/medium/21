@@ -1,0 +1,9 @@
+Q: Display the total amount of patients for each province. Order by descending.
+
+Sol: 
+
+Select pn.province_name, count(*) as patient_count 
+from patients p, province_names pn
+where p.province_id = pn.province_id
+group by pn.province_name
+order by patient_count desc
