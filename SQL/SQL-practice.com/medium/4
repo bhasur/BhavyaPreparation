@@ -1,0 +1,8 @@
+4.
+
+Sol
+Select patient_id, first_name 
+from patients
+where first_name like 's%'
+and first_name like '%s'
+and len(first_name) >= 6;
