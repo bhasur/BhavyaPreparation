@@ -1,0 +1,5 @@
+12. Show all the columns from admissions where the patient was admitted and discharged on the same day.
+
+Sol: Select * 
+from admissions
+where admission_date = discharge_date
