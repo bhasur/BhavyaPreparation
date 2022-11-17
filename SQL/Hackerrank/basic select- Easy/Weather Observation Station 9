@@ -1,3 +1,0 @@
-Question: https://www.hackerrank.com/challenges/weather-observation-station-9/problem
-
-Sol: SELECT distinct CITY FROM STATION WHERE CITY NOT LIKE '[AEIOU]%';

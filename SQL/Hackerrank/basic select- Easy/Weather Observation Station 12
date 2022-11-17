@@ -1,3 +1,0 @@
-Question:https://www.hackerrank.com/challenges/weather-observation-station-12/problem
-
-Sol:select distinct city from station where city not like '%[^aioeu]' and city not like '[^aioeu]%';

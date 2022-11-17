@@ -1,3 +1,0 @@
-Questions: https://www.hackerrank.com/challenges/japanese-cities-attributes/problem
-
-Sol: Select * from city where countrycode = 'JPN'

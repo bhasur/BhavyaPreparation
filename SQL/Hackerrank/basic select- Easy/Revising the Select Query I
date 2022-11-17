@@ -1,5 +1,0 @@
-Question:
-https://www.hackerrank.com/challenges/revising-the-select-query/problem
-
-Sol:
-Select * from CITY where countrycode = 'USA' and population > 100000 

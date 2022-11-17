@@ -1,4 +1,0 @@
-Questions: https://www.hackerrank.com/challenges/japanese-cities-name/problem
-
-Sol:
- Select name from city where countrycode = 'JPN'

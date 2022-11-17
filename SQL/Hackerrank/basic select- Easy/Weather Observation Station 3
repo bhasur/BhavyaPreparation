@@ -1,5 +1,0 @@
-Questions:
-https://www.hackerrank.com/challenges/weather-observation-station-3/problem
-
-Sol:
-Select CIty from station where (ID%2 = 0) order by city
