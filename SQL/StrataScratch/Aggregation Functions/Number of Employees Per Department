@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9906-number-of-employees-per-department?code_type=5
+
+
+Sol: select department, count(*) as number_of_employees
+from employee
+group by department
+order by number_of_employees DESC;
