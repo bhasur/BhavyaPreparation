@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9693-find-the-average-score-for-grades-a-b-and-c?tabname=question
+
+Sol: 
+
+
+select grade, avg (cast(score as float)) as avg
+from los_angeles_restaurant_health_inspections
+group by grade
+order by grade ASC;
