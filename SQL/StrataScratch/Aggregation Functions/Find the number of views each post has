@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9770-find-the-number-of-views-each-post-has?code_type=3
+
+
+Sol:
+
+select post_id, count(*)
+from facebook_post_views
+group by post_id
+order by post_id ASC;
