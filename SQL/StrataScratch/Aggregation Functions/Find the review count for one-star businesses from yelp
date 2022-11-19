@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10050-find-the-review-count-for-one-star-businesses-from-yelp?code_type=5
+
+Sol:
+
+
+select name, review_count 
+from yelp_business
+where stars = 1
+group by name, review_count;
