@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/2069-sales-with-valid-promotion?code_type=3
+
+Sol:
+
+SELECT
+    100*COUNT(fp.promotion_id)/COUNT(fs.promotion_id)
+FROM
+    facebook_sales fs
+LEFT JOIN
+    facebook_promotions fp on fp.promotion_id=fs.promotion_id
