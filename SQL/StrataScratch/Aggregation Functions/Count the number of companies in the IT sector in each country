@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9665-count-the-number-of-companies-in-the-it-sector-in-each-country?code_type=5
+
+Sol:
+
+
+select country, count(industry) as n_companies
+from forbes_global_2010_2014
+where sector = 'Information Technology'
+group by country
+order by n_companies desc;
