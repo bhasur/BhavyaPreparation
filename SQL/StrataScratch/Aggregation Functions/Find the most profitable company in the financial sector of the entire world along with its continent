@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9663-find-the-most-profitable-company-in-the-financial-sector-of-the-entire-world-along-with-its-continent?code_type=3
+
+Sol: 
+
+
+SELECT TOP 1 company,Continent
+FROM forbes_global_2010_2014
+WHERE sector = 'Financials'
