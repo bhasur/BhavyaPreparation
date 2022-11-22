@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9676-find-the-average-distance-traveled-from-each-origin-airport?code_type=3
+
+Sol: 
+
+select origin, avg(distance) 
+from us_flights
+group by origin;
