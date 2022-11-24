@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2119-most-lucrative-products?code_type=5
-
-
-Sol:
-
-select TOP 5 product_id, SUM(cost_in_dollars * units_sold) as revenue 
-from facebook_sales
-group by product_id
-order by revenue DESC;

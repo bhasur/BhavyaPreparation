@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2107-primary-key-violation?code_type=3
-
-Sol:
-
-select cust_id, count(cust_id) as n_occurences
-from dim_customer
-group by cust_id
-having count(cust_id)>1;

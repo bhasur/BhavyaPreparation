@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10005-hour-of-highest-gas-expense?code_type=5
-
-Sol:
-
-select hour 
-from lyft_rides 
-where gasoline_cost = (select max(gasoline_cost) from lyft_rides);

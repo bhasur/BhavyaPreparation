@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9995-top-10-ranked-songs?code_type=5
-
-Sol: 
-
-
-select distinct(trackname), position
-from spotify_worldwide_daily_song_ranking
-where position <=10
-order by position desc, trackname

@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9801-find-the-number-of-american-companies-that-are-on-the-list?code_type=3
-
-Sol:
-
-select count(distinct company) as n_us_companies 
-from forbes_global_2010_2014
-where country = 'United States';

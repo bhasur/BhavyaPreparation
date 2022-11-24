@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2004-number-of-comments-per-user-in-past-30-days?code_type=5
-
-Sol: 
-
-select user_id,sum(number_of_comments) 
-from fb_comments_count
-where created_at between date_add('2020-02-10',interval -30 day) and '2020-02-10'
-group by user_id;

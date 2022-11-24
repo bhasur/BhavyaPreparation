@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9681-highest-market-value-per-sector?code_type=5
-
-Sol:
-
-select sector, max(marketvalue) as max_market_value
-from forbes_global_2010_2014
-group by sector;

@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2124-top-two-media-types?code_type=5
-
-Sol:
-
-select top 2 media_type, sum(cost) as money_spent
-from facebook_sales_promotions
-group by media_type
-order by money_spent desc;

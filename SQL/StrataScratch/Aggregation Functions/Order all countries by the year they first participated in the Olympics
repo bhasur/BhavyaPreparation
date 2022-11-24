@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10184-order-all-countries-by-the-year-they-first-participated-in-the-olympics?code_type=3
-
-Sol:
-
-
-select noc, min(year) as first_time_year
-from olympics_athletes_events
-group by noc
-order by noc asc;

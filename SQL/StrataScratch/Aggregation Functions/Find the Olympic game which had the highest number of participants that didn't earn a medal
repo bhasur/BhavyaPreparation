@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9948-find-the-olympic-game-which-had-the-highest-number-of-participants-that-didnt-earn-a-medal?tabname=question
-
-Sol:
-
-select top 1 games, count(distinct name) as n_athletes
-from olympics_athletes_events
-where medal is NULL  
-group by games 
-order by n_athletes desc;
