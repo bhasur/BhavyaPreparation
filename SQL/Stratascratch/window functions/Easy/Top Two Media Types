@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/2124-top-two-media-types?code_type=3
+
+
+Sol: 
+
+select media_type, sum(cost)
+from facebook_sales_promotions
+group by media_type
+order by sum(cost) desc
+limit 2;
