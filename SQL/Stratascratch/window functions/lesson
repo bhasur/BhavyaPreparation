@@ -81,5 +81,9 @@ LEAD(Sales,1) OVER (PARTITION BY Year ORDER BY Country) AS Next_Sale
 FROM Product_Sales;    
 
 
-FIRST_VALUE():
-LAST_VALUE():
+FIRST_VALUE() & LAST_VALUE():
+
+SELECT Year, Prod_name, Country, Sales,       
+FIRST_VALUE(Sales) OVER(PARTITION BY Country ORDER BY Country) first_sale,  
+LAST_VALUE(Sales) OVER(PARTITION BY Country ORDER BY Country) last_sale      
+FROM Product_Sales;   
