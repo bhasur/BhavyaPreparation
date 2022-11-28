@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/9988-find-the-top-3-jobs-with-the-highest-overtime-pay-rate?code_type=3
+
+
+Sol:
+
+
+select jobtitle, max(overtimepay)
+from sf_public_salaries
+group by jobtitle
+order by max(overtimepay) desc
+limit 3;
