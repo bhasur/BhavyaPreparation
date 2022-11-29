@@ -1,0 +1,14 @@
+Q: https://platform.stratascratch.com/coding/9874-find-the-top-ten-hotels-with-the-highest-ratings?code_type=3
+
+Sol:
+
+
+Select t.hotel_name, t.average_score
+from (select 
+hotel_name, 
+average_score,
+rank() over(order by average_score desc) as rnk
+from hotel_reviews
+group by hotel_name
+order by average_score desc ) as t
+where t.rnk <= 10;
