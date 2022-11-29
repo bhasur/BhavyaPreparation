@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?tabname=question
+
+Sol:
+
+select 
+DENSE_RANK() OVER (ORDER BY sum(n_messages) desc) AS Rnk,
+id_guest,
+sum(n_messages)
+from airbnb_contacts
+group by id_guest;
