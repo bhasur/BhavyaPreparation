@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9706-find-the-month-which-had-the-lowest-number-of-inspections-for-fish-markets-across-all-years?code_type=3
+
+
+Sol:
+
+select month(activity_date), count(*) as n_inspections
+from los_angeles_restaurant_health_inspections
+group by month(activity_date)
+order by n_inspections asc
+limit 1;
