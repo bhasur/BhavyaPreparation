@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/9750-find-the-nominee-who-has-won-the-most-oscars?code_type=3
+
+Sol:
+
+SELECT
+nominee,
+COUNT(id) AS won_cnt
+FROM oscar_nominees
+WHERE winner = 1
+GROUP BY nominee
+ORDER BY won_cnt DESC
+LIMIT 3
