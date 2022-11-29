@@ -1,0 +1,14 @@
+Q: https://platform.stratascratch.com/coding/10083-start-dates-of-top-drivers?code_type=3
+
+Sol:
+
+
+select 
+start_date
+from 
+lyft_drivers
+where 
+end_date is null
+order by
+yearly_salary desc
+limit 5;
