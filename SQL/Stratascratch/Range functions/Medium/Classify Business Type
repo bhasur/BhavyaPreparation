@@ -1,0 +1,15 @@
+Q: https://platform.stratascratch.com/coding/9726-classify-business-type?tabname=question
+
+
+Sol: 
+
+select distinct business_name,
+case
+    when business_name like '%school%' then 'School'
+    when business_name like '%restaurant%' then 'Restaurant'
+    when business_name like '%cafe%' or
+         business_name like '%café%' or
+         business_name like '%coffee%' then 'cafe'
+    Else 'other'
+end as business_type
+from sf_restaurant_health_violations;
