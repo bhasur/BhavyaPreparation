@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/10137-find-workers-with-an-even-number-for-worker-id?code_type=3
+
+Sol:
+
+select * 
+from worker
+where worker_id % 2 = 0;
