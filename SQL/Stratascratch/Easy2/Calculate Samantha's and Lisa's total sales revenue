@@ -1,0 +1,8 @@
+Q:https://platform.stratascratch.com/coding/10127-calculate-samanthas-and-lisas-total-sales-revenue?code_type=3
+
+
+Sol:
+
+select sum(sales_revenue) as total_revenue 
+from sales_performance
+where salesperson IN ('Samantha','Lisa');
