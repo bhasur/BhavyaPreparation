@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/2096-completed-tasks?code_type=3
+
+Sol:
+
+select 
+lower(SUBSTRING_INDEX(employeename,' ',1)) AS firstname , 
+totalpaybenefits
+from sf_public_salaries
+order by totalpaybenefits asc
+limit 1;
+
+
