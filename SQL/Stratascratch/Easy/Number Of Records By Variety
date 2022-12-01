@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10168-number-of-records-by-variety?code_type=3
+
+
+Sol:
+
+Select variety, count(*) as n_total_varieties
+from iris
+group by variety
+order by variety asc;
