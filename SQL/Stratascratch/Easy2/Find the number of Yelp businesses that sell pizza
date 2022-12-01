@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/10153-find-the-number-of-yelp-businesses-that-sell-pizza?code_type=3
+
+Sol:
+
+select count(*) as count
+from yelp_business
+where categories like '%Pizza%';
