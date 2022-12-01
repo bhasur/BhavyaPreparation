@@ -1,0 +1,19 @@
+Q: https://platform.stratascratch.com/coding/10308-salaries-differences?code_type=3
+
+
+Sol:
+
+Select
+ABS(
+(Select max(salary) 
+from db_employee
+join db_dept
+on db_employee.department_id = db_dept.id
+where db_dept.department = 'marketing')
+-
+(Select max(salary) 
+from db_employee
+join db_dept
+on db_employee.department_id = db_dept.id
+where db_dept.department = 'engineering')
+) as Salary_differences;
