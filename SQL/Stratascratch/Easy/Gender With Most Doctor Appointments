@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/10170-gender-with-most-doctor-appointments?code_type=3
+
+
+Sol:
+
+Select gender, count(distinct appointmentid) as n_appointments
+from medical_appointments
+group by gender
+order by n_appointments desc
+limit 1;
