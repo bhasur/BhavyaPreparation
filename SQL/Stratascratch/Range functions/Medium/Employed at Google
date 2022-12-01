@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/2077-employed-at-google?code_type=3
+
+Sol:
+
+select user_id 
+from linkedin_users
+where employer = 'Google'
+and (end_date is null or end_date>= DATE('2021-11-01'))
+and start_date < DATE('2021-11-01');
