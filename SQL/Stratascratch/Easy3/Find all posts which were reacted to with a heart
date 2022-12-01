@@ -1,0 +1,15 @@
+Q: https://platform.stratascratch.com/coding/10087-find-all-posts-which-were-reacted-to-with-a-heart?code_type=3
+
+Sol:
+
+select 
+facebook_posts.post_id,
+facebook_posts.poster,
+facebook_posts.post_text,
+facebook_posts.post_keywords,
+facebook_posts.post_date
+from facebook_reactions
+inner join facebook_posts
+on facebook_reactions.post_id = facebook_posts.post_id
+where facebook_reactions.reaction = 'heart'
+group by facebook_posts.post_text;
