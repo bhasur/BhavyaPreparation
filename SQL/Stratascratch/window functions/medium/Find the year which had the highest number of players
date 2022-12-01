@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9657-find-the-year-which-had-the-highest-number-of-players?code_type=3
-
-
-Sol:
-
-select year,Count(name) as n_players , rank() over(order by Count(name) desc) 
-from nfl_combine
-group by year
-limit 1;

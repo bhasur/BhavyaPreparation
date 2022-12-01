@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9796-find-the-most-popular-sector-in-the-forbes-list?code_type=3
-
-Sol:
-
-select sector, count(company)  as n_companies
-from forbes_global_2010_2014
-group by sector
-order by count(company) desc
-limit 1;

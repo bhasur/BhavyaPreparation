@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9962-top-10-qbs?code_type=3
-
-Sol:
-
-select qb, rate 
-from qbstats_2015_2016
-order by rate desc
-limit 10;
