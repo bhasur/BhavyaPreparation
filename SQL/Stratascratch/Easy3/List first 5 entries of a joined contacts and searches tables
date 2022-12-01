@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10123-list-first-5-entries-of-a-joined-contacts-and-searches-tables?code_type=3
+
+Sol:
+
+select * 
+from airbnb_searches 
+INNER JOIN airbnb_contacts
+on airbnb_searches.id_user = airbnb_contacts.id_guest
+limit 5;
