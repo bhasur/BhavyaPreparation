@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/10167-total-number-of-housing-units?tabname=question
+
+
+Sol:
+
+select housing_units_completed_us.year,
+sum(south)+sum(west)+sum(midwest)+sum(northeast) as n_units
+from housing_units_completed_us
+group by housing_units_completed_us.year
+order by housing_units_completed_us.year asc;
