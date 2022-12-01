@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/10056-cast-stars-column-values-to-integer-and-return-with-all-other-column-values?code_type=3
+
+
+Sol:
+
+select * 
+from yelp_reviews
+where stars NOT LIKE '%?%';
