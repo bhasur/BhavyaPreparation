@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9975-metropolitan-transit-authority-employees?code_type=3
+
+
+Sol:
+
+select employeename, totalpaybenefits
+from sf_public_salaries
+where jobtitle like '%METROPOLITAN TRANSIT AUTHORITY%';
