@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9997-top-100-ranked-songs?code_type=3
+
+Sol: 
+
+select sum(streams) as total_streams
+from spotify_worldwide_daily_song_ranking
+where position between 1 and 100;
