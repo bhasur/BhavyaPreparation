@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9976-find-the-average-total-pay-for-each-employee?code_type=3
+
+Sol: 
+
+select employeename, avg(totalpay) 
+from sf_public_salaries
+group by employeename;
