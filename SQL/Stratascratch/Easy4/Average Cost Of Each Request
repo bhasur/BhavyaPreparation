@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10007-average-cost-of-each-request?code_type=3
+
+
+Sol:
+
+select request_status, 
+avg(monetary_cost) as average_cost
+from uber_ride_requests
+group by request_status;
