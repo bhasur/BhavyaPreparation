@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/10021-find-all-top-rated-wineries-based-on-points?code_type=3
+
+
+Sol:
+
+select distinct winery 
+from winemag_p1
+where points >= 95;
