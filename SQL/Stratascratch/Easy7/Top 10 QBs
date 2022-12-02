@@ -2,6 +2,6 @@ Q: https://platform.stratascratch.com/coding/9962-top-10-qbs?code_type=5
 
 Sol:
 
-select qb, rate 
+select top 10 qb, rate 
 from qbstats_2015_2016
 order by rate desc;
