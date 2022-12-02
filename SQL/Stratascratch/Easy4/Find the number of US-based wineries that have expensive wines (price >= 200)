@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10027-find-the-number-of-us-based-wineries-that-have-expensive-wines-price-200?tabname=question
+
+
+Sol:
+
+Select count(distinct winery) as n_wineries
+from winemag_p1
+where country = 'US'
+and price >= 200;
