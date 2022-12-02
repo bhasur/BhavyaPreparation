@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10005-hour-of-highest-gas-expense?code_type=3
+
+Sol:
+
+select hour
+from lyft_rides
+group by hour
+order by max(gasoline_cost) desc
+limit 1;
