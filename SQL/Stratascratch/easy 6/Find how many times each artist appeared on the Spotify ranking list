@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9992-find-artists-that-have-been-on-spotify-the-most-number-of-times?code_type=3
+
+
+Sol:
+
+Select artist, count(id) as n_occurences
+from spotify_worldwide_daily_song_ranking
+where url like '%spotify%'
+group by artist
+order by n_occurences desc;
