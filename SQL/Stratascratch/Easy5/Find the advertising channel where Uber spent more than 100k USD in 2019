@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/10002-find-the-advertising-channel-where-uber-spent-more-than-100k-usd-in-2019?code_type=3
+
+Sol:
+
+select advertising_channel 
+from uber_advertising
+where year = 2019
+and money_spent >= 100000;
