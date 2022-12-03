@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/9956-find-olympics-games-that-the-youngest-and-the-oldest-athletes-participated-in-the-history-of-olympics?code_type=5
+
+
+Sol:
+
+select *
+from olympics_athletes_events
+where age = (select min(age) from olympics_athletes_events)
+UNION all
+select *
+from olympics_athletes_events
+where age = (select max(age) from olympics_athletes_events)
