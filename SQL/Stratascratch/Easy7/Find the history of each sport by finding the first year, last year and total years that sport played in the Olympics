@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/9954-find-the-history-of-each-sport-by-finding-the-first-year-last-year-and-total-years-that-sport-played-in-the-olympics?tabname=question
+
+Sol:
+
+select sport, 
+min(year) as first_time_played, 
+max(year) as last_time_played,
+COUNT(distinct year) as total_years_played
+from olympics_athletes_events
+group by sport
+order by min(year) desc;
