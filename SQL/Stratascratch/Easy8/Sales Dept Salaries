@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9920-sales-dept-salaries?code_type=3
+
+Sol:
+select first_name 
+from employee
+where department = 'Sales'
+and target > 150
+order by first_name desc;
