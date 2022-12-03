@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9936-find-all-minors-that-participated-in-olympics-games?code_type=3
+
+Sol:
+
+select name, age, games 
+from olympics_athletes_events
+where age <= 18;
