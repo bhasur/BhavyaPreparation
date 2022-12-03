@@ -1,0 +1,8 @@
+Q:https://platform.stratascratch.com/coding/9917-average-salaries?code_type=3
+
+Sol: 
+
+select department, first_name , salary, 
+avg(salary) over(partition by department) as avg
+from employee
+order by department;
