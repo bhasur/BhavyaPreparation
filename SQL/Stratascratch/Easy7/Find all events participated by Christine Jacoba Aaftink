@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9935-find-all-events-participated-by-christine-jacoba-aaftink?code_type=3
+
+Sol: 
+
+select distinct event 
+from olympics_athletes_events
+where name = 'Christine Jacoba Aaftink';
