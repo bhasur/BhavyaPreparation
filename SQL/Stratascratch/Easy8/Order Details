@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9913-order-details?code_type=3
+
+Sol:
+
+select first_name, order_date, order_details, total_order_cost
+from orders
+inner join customers 
+on orders.cust_id = customers.id
+where first_name IN ('JILL','EVA');
