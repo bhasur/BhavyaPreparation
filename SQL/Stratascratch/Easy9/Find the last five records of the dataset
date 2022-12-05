@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9864-find-the-last-five-records-of-the-dataset?code_type=3
+
+Sol:
+
+select *
+from worker
+order by worker_id
+limit 5
+offset 3;
