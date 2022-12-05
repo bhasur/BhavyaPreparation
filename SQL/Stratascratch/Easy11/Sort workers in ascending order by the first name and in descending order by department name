@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9836-sort-workers-in-ascending-order-by-the-first-name-and-in-descending-order-by-department-name?code_type=3
+
+
+Sol:
+
+select * 
+from worker
+order by first_name asc, department desc;
