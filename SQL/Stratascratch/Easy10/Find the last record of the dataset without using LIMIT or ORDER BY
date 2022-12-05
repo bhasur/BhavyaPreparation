@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9862-find-the-last-record-of-the-dataset-without-using-limit-or-order-by?code_type=3
+
+Sol:
+
+select *
+from worker
+where worker_id = (select max(worker_id) from worker);
