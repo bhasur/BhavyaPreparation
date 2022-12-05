@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9853-find-the-top-5-highest-salaries?code_type=3
+
+Sol:
+
+select * 
+from worker
+order by salary desc
+limit 10;
