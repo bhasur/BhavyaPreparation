@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9884-find-the-team-division-of-each-player?code_type=3
+
+Sol: 
+
+select college_football_players.player_name ,
+college_football_teams.division
+from college_football_players
+left join  college_football_teams
+on college_football_players.id = college_football_teams.id;
