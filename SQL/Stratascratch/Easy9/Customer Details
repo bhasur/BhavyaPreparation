@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9891-customer-details?code_type=3
+
+
+Sol:
+
+select customers.first_name, customers.last_name, customers.city, orders.order_details
+from customers
+left join orders 
+on customers.id = orders.cust_id
+order by customers.first_name;
