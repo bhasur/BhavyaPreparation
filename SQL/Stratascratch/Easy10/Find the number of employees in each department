@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9861-find-the-number-of-employees-in-each-department?code_type=3
+
+
+Sol:
+
+select department, count(worker_id)
+from worker
+group by department
+order by department;
