@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9838-find-details-of-workers-excluding-those-with-the-first-name-vipul-or-satish?tabname=question
+
+
+Sol:
+
+Select *
+from worker
+where first_name NOT IN ('Vipul','Satish');
