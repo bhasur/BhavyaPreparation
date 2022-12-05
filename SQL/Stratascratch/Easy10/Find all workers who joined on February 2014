@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9844-find-all-workers-who-joined-on-february-2014?tabname=question
+
+
+Sol:
+
+select * 
+from worker
+where joining_date like '%2014-02%' ;
