@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9841-find-all-workers-whose-first-name-ends-with-the-letter-a?code_type=3
+
+Sol:
+
+select * 
+from worker
+where first_name like '%a';
