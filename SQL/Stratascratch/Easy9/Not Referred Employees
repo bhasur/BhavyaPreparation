@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9907-not-referred-employees?code_type=3
+
+
+Sol:
+
+select first_name 
+from employee
+where manager_id <> 1;
