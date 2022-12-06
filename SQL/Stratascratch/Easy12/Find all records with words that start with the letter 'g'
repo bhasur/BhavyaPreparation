@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9806-find-all-records-with-words-that-start-with-the-letter-g?tabname=question
+
+Sol:
+
+select * 
+from google_word_lists
+where words1 like 'g%' or words1 like '%,g%' 
+or words2 like 'g%' or words2 like '%,g%';
