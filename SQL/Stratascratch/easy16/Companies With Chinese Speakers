@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9685-companies-with-chinese-speakers?code_type=3
+
+
+Sol:
+
+select company_id
+from playbook_users
+where language = 'Chinese'
+group by company_id
+having count(*) >=2;
