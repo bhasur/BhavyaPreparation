@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9717-find-all-businesses-which-have-low-risk-safety-violations?code_type=3
+
+Sol:
+
+select distinct business_name 
+from sf_restaurant_health_violations
+where risk_category = 'Low Risk';
