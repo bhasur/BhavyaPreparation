@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9677-count-the-number-of-cancelled-flights-by-american-airlines-aa?code_type=5
+
+
+Sol:
+
+select count(*) as n_flights
+from us_flights
+where unique_carrier = 'AA'
+and cancelled = 1;
