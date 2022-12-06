@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9666-find-the-industry-which-has-the-lowest-sales-compared-to-all-industries?code_type=3
+
+
+Sol:
+
+select industry , avg(sales) as sales
+from forbes_global_2010_2014
+group by industry
+order by sales asc
+limit 1;
