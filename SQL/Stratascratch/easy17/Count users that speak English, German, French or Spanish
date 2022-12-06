@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9667-count-users-that-speak-english-german-french-or-spanish?code_type=3
+
+Sol:
+
+select count(*) as n_wanted_speakers
+from playbook_users
+where language in ('English','German', 'French','Spanish');
