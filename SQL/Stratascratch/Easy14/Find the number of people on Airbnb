@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9760-find-the-number-of-searches-on-airbnb?code_type=3
+
+
+Sol:
+
+select count(distinct id_user) as total_people_searching
+from airbnb_searches;
