@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9805-find-drafts-which-contains-the-word-optimism?code_type=3
+
+
+Sol:
+
+Select *
+from google_file_store
+where contents like '%optimism%'
+and filename like '%draft%';
