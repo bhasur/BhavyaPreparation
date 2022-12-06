@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9768-find-all-posts-with-the-keyword-nba?code_type=3
+
+
+Sol:
+
+select * 
+from facebook_posts
+where post_keywords like '%nba%';
