@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9697-bakery-owned-facilities?code_type=3
+
+
+Sol:
+
+select owner_name,  pe_description
+from los_angeles_restaurant_health_inspections
+where owner_name like '%BAKERY%'
+group by owner_name;
