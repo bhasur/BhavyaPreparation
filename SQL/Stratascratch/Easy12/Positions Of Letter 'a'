@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9829-positions-of-letter-a?tabname=question
+
+
+SOl:
+select locate("a", first_name, 2) as a_pos 
+from worker
+where first_name = 'Amitah';
