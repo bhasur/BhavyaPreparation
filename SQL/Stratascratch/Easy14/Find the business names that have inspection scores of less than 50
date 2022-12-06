@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9720-find-the-business-names-that-have-inspection-scores-of-less-than-50?tabname=question
+
+
+Sol:
+
+select business_name, date_format(inspection_date, "%Y-%m-%d")as inspection_date, inspection_score
+from sf_restaurant_health_violations
+where inspection_score < 50 
+group by business_name, inspection_date
+order by business_name, inspection_date;
