@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9690-find-all-routine-inspections-where-high-risk-issues-were-found?code_type=3
+
+
+Sol:
+
+select * 
+from los_angeles_restaurant_health_inspections
+where pe_description like '%HIGH Risk%'
+and service_description like '%ROUTINE INSPECTION%';
