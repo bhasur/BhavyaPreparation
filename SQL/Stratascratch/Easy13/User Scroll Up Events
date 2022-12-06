@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9787-user-scroll-up-events?code_type=3
+
+
+Sol:
+
+select user_id 
+from facebook_web_log
+where action = 'scroll_up'
+order by user_id;
