@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9673-find-unique-iata-codes?code_type=3
+
+
+Sol:
+
+select distinct origin
+from us_flights;
+
