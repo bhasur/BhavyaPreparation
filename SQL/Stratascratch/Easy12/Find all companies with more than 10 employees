@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9807-find-all-companies-with-more-than-10-employees?code_type=3
+
+Sol:
+
+select * 
+from google_adwords_earnings
+where n_employees > 10;
