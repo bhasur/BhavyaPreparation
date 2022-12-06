@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9718-find-all-businesses-which-have-a-phone-number-listed?code_type=3
+
+Sol:
+
+select  distinct business_name
+from sf_restaurant_health_violations
+where business_phone_number is not NULL;
