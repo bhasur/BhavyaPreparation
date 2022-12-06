@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9769-find-all-friends-who-liked-a-post?code_type=3
+
+
+Sol:
+
+select friend 
+from facebook_reactions
+where reaction = 'like'
+group by friend
+having count(reaction)>=1 ;
