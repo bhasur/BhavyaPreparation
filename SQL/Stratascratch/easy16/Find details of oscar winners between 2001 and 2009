@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9687-find-details-of-oscar-winners-between-2001-and-2009?tabname=question
+
+
+Sol:
+
+select year,category,nominee,movie, winner ,id 
+from oscar_nominees
+where year between 2001 and 2009
+having winner = 1;
