@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9767-find-all-messages-which-have-references-to-either-user-2-or-3?code_type=3
+
+
+Sol:
+
+select * 
+from facebook_messages_sent
+where text like '%2%' or text like '%3%';
