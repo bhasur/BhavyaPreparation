@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9669-count-the-number-of-speakers-per-each-language?code_type=3
+
+
+Sol:
+
+select language, count(user_id) as n_speakers
+from playbook_users
+group by language
+order by n_speakers desc;
