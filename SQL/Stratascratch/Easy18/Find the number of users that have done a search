@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9641-find-the-number-of-users-that-have-done-a-search?code_type=3
+
+
+Sol:
+
+select count(distinct id_user) as count 
+from airbnb_searches;
