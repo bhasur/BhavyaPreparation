@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/9598-find-non-hs-sat-scores?code_type=3
+
+Sol:
+
+select * 
+from sat_scores
+where school NOT like '%HS';
