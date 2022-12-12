@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/2017-paid-users-in-april-2020?code_type=3
+
+
+Sol:
+
+select count(distinct user_id)
+from rc_users
+where status = 'paid'
+and user_id in (Select  user_id 
+from rc_calls
+where date like '%2020-04%')
