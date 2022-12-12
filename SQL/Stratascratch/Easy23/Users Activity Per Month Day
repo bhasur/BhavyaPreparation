@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/2006-users-activity-per-month-day?code_type=3
+
+
+Sol:
+
+select distinct right(post_date,1) as date_part , count(*)
+from facebook_posts
+group by date_part;
