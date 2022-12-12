@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/2116-shipped-by-speedy-express?code_type=3
+
+Sol:
+
+select count(order_id)  as n_shipped
+from shopify_orders 
+inner join shopify_carriers
+on shopify_orders.carrier_id = shopify_carriers.id
+and shopify_carriers.name = 'Speedy Express';
