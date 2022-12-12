@@ -1,0 +1,16 @@
+Q: https://platform.stratascratch.com/coding/2080-mobile-and-web-logins?code_type=3
+
+
+Sol:
+
+with total as (
+Select m.date, m.user_id 
+from mobile_logs m
+JOIN web_logs w
+on m.user_id = w.user_id
+and w.date = m.date )
+
+Select date, count(distinct user_id)
+from total
+group by date;
+
