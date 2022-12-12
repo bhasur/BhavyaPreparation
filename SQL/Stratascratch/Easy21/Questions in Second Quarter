@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/2062-questions-in-second-quarter?code_type=3
+
+
+Sol:
+
+select count(search_id) 
+from fb_searches
+where Quarter(date) = 2
+and year(date) = 2021;
