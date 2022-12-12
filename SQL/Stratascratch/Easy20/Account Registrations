@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/2126-account-registrations?tabname=question
+
+
+Sol:
+
+select left(started_at,7) as signup_date, count(signup_id) as n_registrations
+from noom_signups
+group by signup_date
+order by signup_date;
