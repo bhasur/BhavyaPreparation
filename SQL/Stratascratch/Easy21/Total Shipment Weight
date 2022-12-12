@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/2058-total-shipment-weight?tabname=question
+
+
+Sol:
+
+select *,
+sum(weight) over (partition by shipment_id) as total_weight
+from amazon_shipment;
