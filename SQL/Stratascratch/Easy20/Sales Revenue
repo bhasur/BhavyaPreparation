@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/2127-sales-revenue?code_type=3
+
+
+Sol:
+
+select sum(order_total)  as revenue
+from amazon_sales
+where order_date like '%2021%';
