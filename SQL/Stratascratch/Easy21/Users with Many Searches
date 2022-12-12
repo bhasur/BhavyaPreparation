@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/2061-users-with-many-searches?code_type=3
+
+
+Sol:
+Select count(user_id)
+from (select distinct user_id 
+      from fb_searches 
+      where date between '2021-08-01' and '2021-08-31'
+      group by user_id
+      having count(*)>5) as a;
