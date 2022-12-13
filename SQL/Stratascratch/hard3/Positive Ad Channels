@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10013-positive-ad-channels?code_type=3
+
+
+Sol:
+
+select advertising_channel from uber_advertising
+where customers_acquired > 1500
+group by 1
+order by max(money_spent) asc limit 1;
