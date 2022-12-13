@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/10134-spam-posts?code_type=3
+
+
+Sol:
+
+select post_date,
+       avg(case when post_keywords like '%spam%' then 1 else 0 end)*100 as spam_perc
+from facebook_post_views a
+left join facebook_posts b on
+    a.post_id=b.post_id
+group by post_date
