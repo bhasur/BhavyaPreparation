@@ -1,0 +1,16 @@
+Q: https://platform.stratascratch.com/coding/9919-unique-highest-salary?tabname=solutions
+
+
+SOl:
+
+WITH cte AS(
+select salary
+    , CASE WHEN count(salary) = 1 THEN 1 END AS dist
+    ,RANK() OVER (Partition by CASE WHEN count(salary) = 1 THEN 1 END ORDER BY salary desc ) as rkn
+from employee
+GROUP BY salary
+)
+
+SELECT salary
+FROM cte
+WHERE rkn = 1 AND dist =1
