@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/10285-acceptance-rate-by-date?code_type=5
+
+
+Sol:
+
+select f1.date, cast(count(f2.action) as float)/cast(count(f1.action) as float)  percentage_acceptance
+from fb_friend_requests f1 left join fb_friend_requests f2 on f1.user_id_sender=f2.user_id_sender and f1.user_id_receiver=f2.user_id_receiver and f2.date>f1.date
+where f1.action<>'accepted'
+group by f1.date
+order by f1.date
