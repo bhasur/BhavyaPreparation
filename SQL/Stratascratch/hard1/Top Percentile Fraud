@@ -1,0 +1,12 @@
+Q:https://platform.stratascratch.com/coding/10303-top-percentile-fraud?tabname=solutions
+
+
+
+Sol:
+
+SELECT policy_num, state, claim_cost, fraud_score 
+FROM(
+    SELECT *, NTILE(20) OVER(PARTITION BY state ORDER BY fraud_score DESC) n_tile
+    FROM fraud_score
+) p
+WHERE n_tile = 1;
