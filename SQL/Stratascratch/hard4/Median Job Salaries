@@ -1,0 +1,15 @@
+Q: https://platform.stratascratch.com/coding/9983-median-job-salaries?tabname=solutions
+
+
+Sol:
+
+select jobtitle, avg(totalpay)
+from (
+    select jobtitle, totalpay,
+    row_number() over(partition by jobtitle order by totalpay) as rnk,
+    count(*) over(partition by jobtitle) as section_count
+    from sf_public_salaries    
+) as one
+where rnk = round(section_count/2) or rnk = round((section_count+1)/2)
+group by 1
+order by 2 desc
