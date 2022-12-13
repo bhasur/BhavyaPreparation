@@ -1,0 +1,38 @@
+Q: https://platform.stratascratch.com/coding/9823-common-letters?tabname=solutions
+
+
+Sol:
+
+WITH RECURSIVE cte AS (
+    SELECT 1 as n
+    UNION ALL 
+    SELECT n+1 FROM cte WHERE N < 400
+)
+,
+cte2 AS (
+SELECT contents
+FROM google_file_store
+UNION 
+SELECT words1
+FROM google_word_lists
+UNION 
+SELECT words2
+FROM google_word_lists
+)
+,
+cte3 AS (
+SELECT contents, n
+FROM cte2 as c2
+CROSS JOIN cte c1
+WHERE c1.n <= LENGTH(c2.contents)
+)
+, cte4 AS (
+SELECT SUBSTRING(contents, n, 1) AS letter
+FROM cte3
+WHERE SUBSTRING(contents, n, 1) REGEXP '[a-zA-Z]'
+)
+SELECT letter, COUNT(letter) 
+FROM cte4
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 3
