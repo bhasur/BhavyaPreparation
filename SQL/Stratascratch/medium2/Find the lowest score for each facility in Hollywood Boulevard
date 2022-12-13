@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/10180-find-the-lowest-score-for-each-facility-in-hollywood-boulevard?code_type=5
+
+
+Sol:
+
+select min(score) as min_score,
+facility_name
+from los_angeles_restaurant_health_inspections
+where facility_address like '%HOLLYWOOD%'
+group by facility_name
+order by min(score) desc, facility_name asc
