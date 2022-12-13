@@ -1,0 +1,22 @@
+Q: https://platform.stratascratch.com/coding/9791-views-per-keyword?tabname=solutions
+
+
+Sol:
+
+WITH recursive numbers AS
+(SELECT 1 AS n UNION SELECT 1+n from numbers
+where n<300)
+
+SELECT 
+CASE WHEN fb.keyword = '#spam#' THEN 'spam' ELSE fb.keyword END AS keyword, 
+COUNT(v.viewer_id) AS n_views FROM
+(SELECT p.post_id, SUBSTRING_INDEX(SUBSTRING_INDEX(SUBSTRING(p.post_keywords, 2, LENGTH(p.post_keywords)-2), ',', n.n), ',', -1) AS keyword
+FROM facebook_posts p
+INNER JOIN
+numbers n
+ON CHAR_LENGTH(p.post_keywords) - CHAR_LENGTH(REPLACE(p.post_keywords, ',', '')) >= n.n-1) fb
+LEFT JOIN
+facebook_post_views v
+ON fb.post_id = v.post_id
+GROUP BY keyword
+ORDER BY n_views DESC;
