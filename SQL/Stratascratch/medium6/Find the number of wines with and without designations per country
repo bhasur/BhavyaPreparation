@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/10035-find-the-number-of-wines-with-and-without-designations-per-country?code_type=3
+
+
+Sol:
+
+SELECT country
+	, SUM(CASE WHEN designation IS NULL then 1 ELSE 0 END) AS n_without
+	, count(designation) as n_with
+	, count(id) as total
+FROM winemag_p2
+GROUP BY 1
