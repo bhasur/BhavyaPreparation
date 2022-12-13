@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/10088-liked-posts?code_type=3
+
+
+Sol:
+
+select count(distinct(post_id))
+from facebook_reactions
+where reaction = 'like';
