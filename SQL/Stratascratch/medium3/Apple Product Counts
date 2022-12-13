@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/10141-apple-product-counts?code_type=3
+
+
+Sol:
+
+select b.language, 
+count(distinct b.user_id) as n_users, 
+count(distinct case when a.device in ('ipad air', 'iphone 5s', 'macbook pro') then a.user_id end) as n_apple_users
+from playbook_events as a 
+join playbook_users as b 
+on a.user_id = b.user_id
+group by 1
+order by 2 desc
