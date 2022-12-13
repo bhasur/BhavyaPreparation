@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/10147-find-countries-that-are-in-winemag_p1-dataset-but-not-in-winemag_p2?tabname=question
+
+
+Sol:
+
+SELECT DISTINCT country 
+from winemag_p1
+where country not in (SELECT DISTINCT country from winemag_p2)
