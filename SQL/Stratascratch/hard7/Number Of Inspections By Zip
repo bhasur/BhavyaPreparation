@@ -1,0 +1,14 @@
+Q: https://platform.stratascratch.com/coding/9734-number-of-inspections-by-zip?tabname=solutions
+
+
+Sol:
+
+select year(inspection_date) as year,
+        sum(case when month(inspection_date) = 1 then 1 else 0 end) as january_counts,
+        sum(case when month(inspection_date) = 5 then 1 else 0 end) as
+            may_counts,
+        sum(case when month(inspection_date) = 11 then 1 else 0 end) as 
+            november_counts
+        from sf_restaurant_health_violations
+        where business_postal_code = 94102
+        group by year
