@@ -1,0 +1,19 @@
+Q: https://platform.stratascratch.com/coding/9985-above-average-but-not-at-the-top?tabname=solutions
+
+
+
+Sol:
+
+with cte as (
+select
+    employeename,
+    totalpay,
+    rank() over(partition by jobtitle order by totalpay desc) as rnk,
+    avg(totalpay) over(partition by jobtitle) as pay
+from sf_public_salaries
+where year = 2013
+)
+select employeename
+from cte
+where totalpay > pay
+and rnk > 5
