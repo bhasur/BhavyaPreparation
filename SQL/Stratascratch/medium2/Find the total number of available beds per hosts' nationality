@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/10187-find-the-total-number-of-available-beds-per-hosts-nationality?code_type=5
+
+
+Sol:
+
+select sum(a.n_beds) as beds,
+b.nationality
+from airbnb_apartments a
+inner join airbnb_hosts b
+on a.host_id = b.host_id
+group by b.nationality
+order by sum(a.n_beds) desc
