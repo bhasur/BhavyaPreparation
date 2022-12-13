@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/10353-workers-with-the-highest-salaries?code_type=3
+
+
+Sol:
+
+Select worker.salary, 
+title.worker_title
+from worker
+join title
+on worker.worker_id = title.worker_ref_id
+where worker.salary = (select max(salary) from worker)
