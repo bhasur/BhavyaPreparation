@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=3
+
+
+Sol:
+
+SELECT employee_title, sex , AVG(se.salary + sb.bonus) AS avg_TC
+FROM sf_employee se 
+JOIN  
+(SELECT worker_ref_id, SUM(bonus) AS bonus
+FROM sf_bonus GROUP BY worker_ref_id) AS sb
+
+ON se.id = sb.worker_ref_id
+GROUP BY 1, 2
