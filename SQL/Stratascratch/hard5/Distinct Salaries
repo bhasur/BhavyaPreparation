@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9898-unique-salaries?tabname=solutions
+
+
+Sol:
+
+with cte as (select department,salary,rank() over(partition by department order by salary desc) as rnk from twitter_employee group by 1,2)
+
+select department,salary from cte
+where rnk < 4;
