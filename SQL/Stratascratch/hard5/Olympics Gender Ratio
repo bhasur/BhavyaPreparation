@@ -1,0 +1,14 @@
+Q:https://platform.stratascratch.com/coding/9953-find-the-gender-ratio-between-the-number-of-men-and-women-who-participated-in-each-olympics?tabname=solutions
+
+
+Sol:
+
+select games, n_man, n_women, 
+n_man/if(n_women = 0, null, n_women) as ratio
+from
+(select games, 
+sum(case when sex = 'M' then 1 else 0 end) as n_man, 
+sum(case when sex = 'F' then 1 else 0 end) as n_women
+from
+(select distinct year, id, sex,games from olympics_athletes_events)s1
+group by games) s2
