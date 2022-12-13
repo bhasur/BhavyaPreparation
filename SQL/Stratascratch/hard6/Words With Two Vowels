@@ -1,0 +1,25 @@
+Q: https://platform.stratascratch.com/coding/9794-words-with-two-vowels?tabname=solutions
+
+
+Sol:
+
+
+with recursive cte as (
+select 1 as n
+union all 
+select 1+n from cte
+where n<200
+)
+, t2 as (
+select words1 as word from google_word_lists
+union all
+select words2 from google_word_lists)
+, t3 as (
+select *,length(word)-length(replace(word,',',''))+1 as no_word,
+substring_index(substring_index(word,',',n),',',-1) word_ser
+from t2
+cross join cte
+where n<3 order by 1,2)
+select word_ser from (
+select word_ser,length(word_ser)-length(regexp_replace(word_ser, "[aeiou]", "")) as no_of_vowels
+from t3) t4 where no_of_vowels=2 group by 1
