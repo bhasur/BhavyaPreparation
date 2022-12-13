@@ -1,0 +1,15 @@
+Q:
+https://platform.stratascratch.com/coding/10295-most-active-users-on-messenger?code_type=5
+
+
+Sol:
+
+SELECT TOP 10 user1, SUM(msg_count) AS Total
+FROM (
+SELECT user1 , msg_count
+FROM fb_messages
+UNION ALL
+SELECT user2 , msg_count
+FROM fb_messages) tbl
+GROUP BY user1
+ORDER BY Total DESC
