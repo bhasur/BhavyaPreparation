@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10324-distances-traveled?tabname=question
+
+
+Sol:
+
+select top 10 user_id,name,sum(distance) as total_dis
+from lyft_rides_log as r left join lyft_users as u on r.user_id=u.id
+group by user_id,name
+order by total_dis desc
