@@ -1,0 +1,19 @@
+Q: https://platform.stratascratch.com/coding/10017-year-over-year-churn?tabname=solutions
+
+
+Sol:
+
+WITH CTE AS (select 
+YEAR(end_date) AS churn_year,
+COUNT(CASE WHEN end_date IS  NOT NULL THEN 1 END ) AS churn_no
+from lyft_drivers
+GROUP BY 
+1 
+ORDER BY
+churn_year ASC ),
+
+CTE2 AS ( select
+churn_year,
+churn_no,
+LAG(churn_no) OVER(ORDER BY  churn_year ) AS prev_year
+FROM CTE )
