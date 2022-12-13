@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=3
+
+
+Sol:
+
+select distinct name, 
+sum(review_count) as sum_review_count
+from yelp_business
+group by business_id
+order by sum_review_count desc
+limit 5;
