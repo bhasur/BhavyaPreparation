@@ -1,0 +1,6 @@
+Q: https://platform.stratascratch.com/coding/9708-find-the-variance-and-the-standard-deviation-of-scores-that-have-grade-a?code_type=3
+
+
+Sol:select VARIANCE(score) as variance, STDDEV(score) as standard_deviation
+FROM los_angeles_restaurant_health_inspections
+WHERE grade='A'
