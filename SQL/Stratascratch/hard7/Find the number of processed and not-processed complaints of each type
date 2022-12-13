@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/9790-find-the-number-of-processed-and-not-processed-complaints-of-each-type?tabname=solutions
+
+
+Sol:
+
+SELECT
+    type
+    , SUM(IF(processed=TRUE,'1','0')) N_Compaints_TRUE
+    , SUM(IF(processed=FALSE,'1','0')) N_Compaints_FALSE
+FROM
+    facebook_complaints
+GROUP BY
+    type
