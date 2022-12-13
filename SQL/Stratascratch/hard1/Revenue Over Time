@@ -1,0 +1,14 @@
+Q: https://platform.stratascratch.com/coding/10314-revenue-over-time?code_type=3
+
+
+Sol:
+
+WITH p as(
+    SELECT DATE_FORMAT(created_at, "%Y-%m") date, SUM(purchase_amt) total
+    FROM amazon_purchases
+    WHERE purchase_amt > 0
+    GROUP BY 1
+)
+
+SELECT date, AVG(total) OVER(ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) avg_revenue
+FROM p
