@@ -1,0 +1,39 @@
+Q: https://platform.stratascratch.com/coding/9776-common-interests-amongst-users?tabname=solutions
+
+
+Sol:
+
+with recursive cte1 as
+(
+    select 
+        *,
+        replace(replace(post_keywords, '[', ''), ']', '') as keywords,
+        length(post_keywords) - length(replace(post_keywords, ',', '')) + 1 as max_word_count
+    from facebook_posts
+),
+cte2 as (
+    select
+        poster,
+        keywords,
+        substring_index(substring_index(keywords, ',', max_word_count), ',', -1) as split_word,
+        max_word_count
+    from cte1
+    UNION ALL 
+    select
+        poster,
+        keywords,
+        substring_index(substring_index(keywords, ',', max_word_count - 1), ',', -1) as split_word,
+         max_word_count - 1
+    from cte2
+    where max_word_count > 1   
+)
+
+select 
+    t1.poster as p1,
+    t2.poster as p2,
+    count(t2.split_word) / count(t1.split_word) as overlap
+from cte2 t1 left join cte2 t2
+ON t1.poster != t2.poster and t1.split_word = t2.split_word
+group by p1
+having count(t2.split_word) / count(t1.split_word) > 0
+order by p1, p2
