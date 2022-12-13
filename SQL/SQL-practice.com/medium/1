@@ -1,4 +1,0 @@
-Q: Show unique birth years from patients and order them by ascending.
-
-Sol: Select distinct(year(birth_date)) as unique_year from patients order by unique_year asc
-

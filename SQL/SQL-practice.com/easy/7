@@ -1,8 +1,0 @@
-7.Show first name, last name, and the full province name of each patient.
-
-Example: 'Ontario' instead of 'ON'
-
-SOL: 
-Select p.first_name, p.last_name, pn.province_name
-from patients p, province_names pn
-where p.province_id = pn.province_id
