@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10019-find-the-probability-of-ordering-a-ride-based-on-the-weather-and-the-hour?code_type=3
+
+
+Sol:
+
+SELECT weather, hour, count(*)/sum(count(*)) over () as pct 
+FROM lyft_rides
+GROUP BY 1,2
+order by 1,2
