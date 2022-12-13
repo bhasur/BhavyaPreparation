@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/10124-bookings-vs-non-bookings?code_type=3
+
+
+Sol:
+
+SELECT 
+    (CASE
+        WHEN c.ts_booking_at IS NULL THEN 'does not book' ELSE 'books'
+    END) AS action,
+    AVG(n_searches) AS average_searches
+FROM airbnb_contacts c
+RIGHT JOIN airbnb_searches s ON s.id_user = c.id_guest AND s.ds_checkin = c.ds_checkin
+GROUP BY 1
