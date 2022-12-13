@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9959-olympic-medals-by-chinese-athletes?tabname=solutions
+
+
+Sol:
+
+SELECT medal, count(case year when 2000 then id end) medals_2000, count(case year when 2004 then id end), count(case year when 2008 then id end) medals_2008, count(case year when 2012 then id end) medals_2012, count(case year when 2016 then id end) medals_2016, count(id) total_medals FROM olympics_athletes_events
+where team = 'China' and season ='Summer' and year between 2000 and 2016
+group by medal
+order by total_medals desc
