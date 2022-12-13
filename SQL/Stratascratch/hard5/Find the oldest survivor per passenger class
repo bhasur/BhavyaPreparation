@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/9883-find-the-oldest-survivor-per-passenger-class?tabname=solutions
+
+Sol:
+
+select pclass, name, age from 
+(select pclass, name, age, 
+rank() over(partition by pclass order by age desc) as rnk 
+from titanic
+where survived = 1 and age is not null) s1 
+where rnk = 1 
+order by 1
