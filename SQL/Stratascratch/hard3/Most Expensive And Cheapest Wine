@@ -1,0 +1,18 @@
+Q: https://platform.stratascratch.com/coding/10041-most-expensive-and-cheapest-wine?tabname=solutions
+
+
+Sol:
+
+WITH cte AS (
+    SELECT region_1 region, variety, price FROM winemag_p1 WHERE region_1 IS NOT NULL AND price IS NOT NULL
+    UNION ALL
+    SELECT region_2, variety, price FROM winemag_p1 WHERE region_2 IS NOT NULL AND price IS NOT NULL
+),
+cte2 AS (
+    SELECT
+        region,
+        first_value(variety) OVER(partition by region order by price) most_cheap,
+        first_value(variety) OVER(partition by region order by price DESC) most_expensive
+    FROM cte
+)
+SELECT * FROM cte2 GROUP BY 1
