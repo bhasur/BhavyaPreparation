@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/10178-businesses-open-on-sunday?code_type=5
+
+
+Sol:
+
+SELECT sunday, COUNT(sunday) AS n_business 
+FROM yelp_business_hours h JOIN yelp_business y
+ON h.business_id = y.business_id
+WHERE is_open = 1 AND sunday is not null
+GROUP BY sunday
+ORDER BY n_business DESC
