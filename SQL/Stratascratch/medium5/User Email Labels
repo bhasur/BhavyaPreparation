@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/10068-user-email-labels?code_type=3
+
+
+Sol:
+
+SELECT to_user,
+    SUM(CASE WHEN label = 'Promotion' THEN 1 ELSE 0 END) AS promotion,
+    SUM(CASE WHEN label = 'Social' THEN 1 ELSE 0 END) AS social,
+    SUM(CASE WHEN label = 'Shopping' THEN 1 ELSE 0 END) AS shopping
+FROM google_gmail_emails as e
+JOIN google_gmail_labels as l on l.email_id = e.id 
+GROUP BY 1
+
