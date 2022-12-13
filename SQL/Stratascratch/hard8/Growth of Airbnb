@@ -1,0 +1,22 @@
+Q: https://platform.stratascratch.com/coding/9637-growth-of-airbnb?tabname=solutions
+
+
+Sol:
+
+WITH HOST_GRP_YEAR AS 
+(select YEAR(HOST_SINCE) as year_h, 
+COUNT(ID) cnt_hosts
+from airbnb_search_details
+group by 1) 
+
+,LAG_HOSTS AS 
+(SELECT year_h
+,cnt_hosts as current_hosts
+,lag(cnt_hosts) over(order by year_h) as prev_hosts
+from HOST_GRP_YEAR)
+
+select year_h
+,current_hosts
+,prev_hosts
+,round(((current_hosts-prev_hosts)/prev_hosts)*100) as growth_rate
+from LAG_HOSTS
