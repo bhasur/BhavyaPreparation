@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/10085-facebook-matching-users-pairs?code_type=3
+
+
+Sol:
+
+select a.id,b.id
+from facebook_employees a join facebook_employees b
+on a.id!=b.id
+and a.age!=b.age
+and a.location=b.location
+and a.gender=b.gender
+and a.is_senior!=b.is_senior;
