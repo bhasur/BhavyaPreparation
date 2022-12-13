@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=5
+
+
+Sol:
+
+select count (distinct Unit_id) NOA,nationality  
+from airbnb_hosts ah join airbnb_units au on ah.host_id = au.host_id 
+where Unit_type = 'apartment' and age < 30
+group by nationality
+order by NOA
