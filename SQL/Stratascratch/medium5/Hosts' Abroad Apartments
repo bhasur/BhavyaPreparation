@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/10071-hosts-abroad-apartments?code_type=3
+
+
+Sol:
+
+select 
+count( distinct ah.host_id )
+from airbnb_hosts ah
+inner join airbnb_apartments aa
+on ah.host_id = aa.host_id and ah.nationality != aa.country
+;
