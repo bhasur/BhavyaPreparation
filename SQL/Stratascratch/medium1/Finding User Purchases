@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=5
+
+
+Sol:
+
+select distinct a.user_id from amazon_transactions a 
+join
+amazon_transactions b
+on a.user_id = b.user_id
+and a.id <> b.id 
+and b.created_at between a.created_at and dateadd(day , 7 , a.created_at)
