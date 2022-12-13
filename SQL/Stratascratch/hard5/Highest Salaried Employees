@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9865-highest-salaried-employees?code_type=3
+
+Sol:
+
+select department, first_name, salary 
+from (
+select department, first_name, salary, 
+rank() over(partition by department order by salary desc) as rnk
+from worker) s1 
+where rnk = 1
