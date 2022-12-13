@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/10138-find-the-average-height-of-players-in-the-position-rb-by-division?code_type=3
+
+
+Sol:
+
+Select t.division,avg(p.height) as average_height from 
+college_football_teams t join college_football_players p
+on t.school_name=p.school_name where position="RB" group by 1;
+
+
