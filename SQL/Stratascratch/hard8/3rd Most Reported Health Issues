@@ -1,0 +1,19 @@
+Q: https://platform.stratascratch.com/coding/9701-3rd-most-reported-health-issues?tabname=solutions
+
+
+Sol:
+
+with c as(   
+    select pe_description, 
+           dense_rank() over(order by count(*) desc) rnk
+    from los_angeles_restaurant_health_inspections
+    where facility_name like '%Cafe%' or facility_name like '%Tea%'
+            or facility_name like '%Juice%'
+    group by 1)
+
+select facility_name
+from los_angeles_restaurant_health_inspections l
+join c on l.pe_description=c.pe_description
+where (facility_name like '%Cafe%' or facility_name like '%Tea%'
+            or facility_name like '%Juice%')
+and rnk=3
