@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/10089-find-the-number-of-customers-without-an-order?code_type=3
+
+Sol:
+
+select 
+count(c.id) as num 
+from customers c
+left join orders o
+on o.cust_id=c.id
+where o.cust_id is null;
