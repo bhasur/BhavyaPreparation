@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10301-expensive-projects?code_type=5
+
+
+Sol:
+
+SELECT title, CAST(ROUND(1.0*budget/COUNT(DISTINCT emp_id), 0) AS INTEGER) budget_emp_ratio
+FROM ms_projects P JOIN ms_emp_projects E ON P.id = E.project_id
+GROUP BY title,budget
+ORDER BY budget_emp_ratio DESC;
