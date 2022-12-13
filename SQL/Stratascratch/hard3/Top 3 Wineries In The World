@@ -1,0 +1,17 @@
+Q: https://platform.stratascratch.com/coding/10042-top-3-wineries-in-the-world?tabname=solutions
+
+
+Sol:
+WITH cte AS (
+SELECT country, winery, AVG(points) apoints, RANK() OVER(PARTITION BY country ORDER BY AVG(points) DESC, winery) rnk
+FROM winemag_p1
+GROUP BY country, winery
+)
+
+SELECT t1.country, CONCAT(t1.winery, " (", ROUND(t1.apoints, 0), ')') as best, IFNULL(CONCAT(t2.winery, " (", ROUND(t2.apoints, 0), ')'), "No second winery") as second_winery, IFNULL(CONCAT(t3.winery, " (", ROUND(t3.apoints, 0), ')'), "No third winery") as third_winery
+FROM cte t1
+LEFT JOIN cte t2
+ON t1.rnk+1 = t2.rnk AND t1.country = t2.country
+LEFT JOIN cte t3
+ON t1.rnk+2 = t3.rnk AND t1.country = t3.country
+WHERE t1.rnk = 1
