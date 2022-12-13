@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/9979-find-the-top-5-highest-paid-and-top-5-least-paid-employees-in-2012?tabname=solutions
+
+
+Sol:
+
+(select employeename,totalpaybenefits from sf_public_salaries
+where year = 2012
+order by 2 asc limit 5)
+union
+(select employeename,totalpaybenefits from sf_public_salaries
+where year = 2012
+order by 2 desc limit 5)
+order by 2;
