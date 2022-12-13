@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/10351-activity-rank?tabname=question
+
+
+Sol:
+
+Select from_user, 
+count(ID) as email_activity,
+rank() over (order by count(ID) desc, from_user) as activity_rank
+from google_gmail_emails
+group by from_user
+order by count(*) desc
