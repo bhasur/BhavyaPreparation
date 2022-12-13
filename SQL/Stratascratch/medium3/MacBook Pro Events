@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/10140-macbook-pro-events?code_type=3
+
+
+Sol:
+
+Select u.company_id,u.language,count(u.company_id) as n_macbook_pro_events
+from playbook_users u join playbook_events e
+on u.user_id=e.user_id where e.location='Argentina'
+and u.language<>'Spanish' group by 1,2
