@@ -1,0 +1,14 @@
+Q: https://platform.stratascratch.com/coding/9989-highest-paid-city-employees?tabname=solutions
+
+
+Sol:
+
+with cte as(select jobtitle, employeename, totalpaybenefits, 
+row_number() over(partition by jobtitle order by totalpaybenefits desc) as rnk
+from sf_public_salaries)
+
+select jobtitle,
+max(case when rnk = 1 then employeename else null end) as highest, 
+max(case when rnk = 2 then employeename else null end) as second_highest
+from cte
+group by 1
