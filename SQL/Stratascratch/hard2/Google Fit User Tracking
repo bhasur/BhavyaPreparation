@@ -1,0 +1,42 @@
+Q: https://platform.stratascratch.com/coding/10067-google-fit-user-tracking?code_type=3.
+
+SOL:
+
+with
+cte1 as (   
+        select
+            *
+        from (  select
+                    *,
+                    dense_rank() over(partition by user_id, session_id, day order by step_id) as rnk
+                from (  select
+                            *,
+                            count(session_id) over(partition by user_id, session_id, day) as n_useful_data
+                        from google_fit_location    ) as g1
+                where n_useful_data > 1 ) as g2
+        where rnk = 1 or rnk = n_useful_data    ),
+cte2 as (
+        select
+            *
+        from (  select
+                    user_id,    lead(user_id, 1) over() as nxt_user_id,
+                    session_id,  lead(session_id, 1) over() as nxt_session_id,
+                    step_id,     lead(step_id, 1) over() as nxt_step_id,
+                    day,     lead(day, 1) over() as nxt_day,
+                    latitude as lat1,    lead(latitude, 1) over() as lat2,
+                    longitude as lon1,     lead(longitude, 1) over() as lon2
+                from cte1   ) as cte1_1
+        where 
+            user_id = nxt_user_id
+            and day = nxt_day   )
+select
+    avg(d_curve),
+    avg(d_flat),
+    avg(d_curve) - avg(d_flat) as avg_diff
+from (  select
+            *,
+            acos(   sin(lat1 * pi() / 180) * sin(lat2 * pi() / 180) 
+                    + cos(lat1 * pi() / 180) * cos(lat2 * pi() / 180) 
+                    * cos((lon2 * pi() / 180) - (lon1 * pi() / 180))     ) * 6371 as d_curve,
+            sqrt(   power((lat2 - lat1), 2) + power((lon2 - lon1), 2)    ) * 111 as d_flat
+        from cte2   ) as cte2_1
