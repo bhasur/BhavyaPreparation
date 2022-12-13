@@ -1,0 +1,29 @@
+Q: https://platform.stratascratch.com/coding/9816-find-the-list-of-intersections-between-both-word-lists?tabname=solutions
+
+
+Sol:
+
+WITH cte AS (
+select SUBSTRING_INDEX(words1, ',', -1) AS words
+from google_word_lists
+UNION 
+select SUBSTRING_INDEX(words1, ',', 1) AS words
+from google_word_lists
+UNION 
+select SUBSTRING_INDEX(SUBSTRING_INDEX(words1, ',', 2), ',', -1) AS words
+from google_word_lists)
+,
+cte2 AS (
+select SUBSTRING_INDEX(words2, ',', -1) AS words2
+from google_word_lists
+UNION 
+select SUBSTRING_INDEX(words2, ',', 1) AS words2
+from google_word_lists
+UNION 
+select SUBSTRING_INDEX(SUBSTRING_INDEX(words2, ',', 2), ',', -1) AS words2
+from google_word_lists)
+
+SELECT words
+FROM cte c
+JOIN cte2 c2 
+ON c.words = c2.words2
