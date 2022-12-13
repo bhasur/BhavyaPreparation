@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9859-find-the-first-50-records-of-the-dataset?code_type=3
+
+Sol:
+
+WITH CTE AS( 
+SELECT *, ROW_NUMBER() OVER(ORDER BY (SELECT NULL)) AS num
+FROM worker)
+
+SELECT * FROM CTE
+WHERE num<=(SELECT MAX(num)/2 FROM CTE);
