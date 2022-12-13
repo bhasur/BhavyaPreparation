@@ -1,0 +1,19 @@
+Q: https://platform.stratascratch.com/coding/10313-naive-forecasting?tabname=solutions
+
+
+Sol:
+
+WITH m AS (
+  SELECT LEFT(request_date, 7) AS month, SUM(distance_to_travel) AS distance_monthly, SUM(monetary_cost) AS cost_monthly
+    FROM uber_request_logs
+   GROUP BY 1
+   ORDER BY 1
+  ),
+
+f AS (
+SELECT month, distance_monthly / cost_monthly AS actual, LAG(distance_monthly / cost_monthly, 1) OVER (ORDER BY month) AS forecast
+  FROM m
+)
+
+SELECT ROUND(SQRT(AVG(POWER(actual - forecast, 2))), 2) AS RMSE
+FROM f
