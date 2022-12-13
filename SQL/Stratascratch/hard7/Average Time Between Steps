@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/9793-average-time-between-steps?tabname=solutions
+
+
+Sol:
+
+SELECT feature_id, AVG(avg_diff)
+FROM
+(select a.feature_id, a.user_id,
+    AVG(timestampdiff(second, b.timestamp, a.timestamp)) as avg_diff
+from facebook_product_features_realizations a JOIN facebook_product_features_realizations b on a.feature_id = b.feature_id and a.user_id = b.user_id
+where a.step_reached = (b.step_reached + 1) 
+group by a.feature_id, a.user_id) as avg_times
+Group BY feature_id
