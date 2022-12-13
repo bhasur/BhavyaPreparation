@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/9633-city-with-most-amenities?tabname=solutions
+
+
+Sol:
+
+select city
+    ,RANK() OVER (ORDER BY count(city) DESC)  AS rkn
+from airbnb_search_details
+GROUP BY city
+ORDER BY rkn 
+LIMIT 1
