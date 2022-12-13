@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/10172-best-selling-item?tabname=solutions
+
+
+Sol:
+
+WITH t1 AS (SELECT MONTH(invoicedate) AS the_month, description ,SUM(quantity * unitprice) AS sells,
+      DENSE_RANK()OVER(PARTITION BY MONTH(invoicedate) ORDER BY SUM(quantity * unitprice) DESC) the_rank
+FROM online_retail
+GROUP BY 1,2)
+
+SELECT the_month, description, sells
+FROM t1
+WHERE the_rank =1
