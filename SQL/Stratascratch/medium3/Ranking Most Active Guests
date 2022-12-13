@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=5
+
+
+Sol:
+
+with totalmessages as (
+select sum(n_messages) totmess, id_guest
+from airbnb_contacts
+group by id_guest)
+select 
+    dense_rank() over (order by totmess desc) ranks,
+    id_guest, totmess
+from totalmessages;
