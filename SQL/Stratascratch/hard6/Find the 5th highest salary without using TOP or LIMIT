@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/9855-find-the-5th-highest-salary-without-using-top-or-limit?tabname=solutions
+
+
+
+Sol:
+
+Select salary
+From(
+    select salary,
+    row_number () Over (order by salary desc) as rnk
+    from worker) t1
+Where rnk  = 5
