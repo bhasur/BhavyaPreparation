@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/10169-highest-total-miles?code_type=5
+
+
+Sol:
+
+select TOP 3
+    purpose 
+    , SUM(miles) as totalsum
+from my_uber_drives
+WHERE category = 'Business'
+GROUP BY purpose
+ORDER BY totalsum DESC
