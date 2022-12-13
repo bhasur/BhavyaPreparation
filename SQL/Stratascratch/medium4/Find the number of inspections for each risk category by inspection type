@@ -1,0 +1,14 @@
+Q: https://platform.stratascratch.com/coding/10130-find-the-number-of-inspections-for-each-risk-category-by-inspection-type?code_type=3
+
+
+Sol:
+
+SELECT inspection_type
+	, SUM(CASE WHEN risk_category IS NULL THEN 1 else 0 end) as no_risk
+	, SUM(CASE WHEN risk_category = 'Low Risk' THEN 1 else 0 end) as low_risk
+	, SUM(CASE WHEN risk_category = 'Moderate Risk' THEN 1 else 0 end) as moderate_risk
+	, SUM(CASE WHEN risk_category = 'High Risk' THEN 1 else 0 end) as high_risk
+	, COUNT(*) AS total_inspections
+FROM sf_restaurant_health_violations
+GROUP BY 1
+ORDER BY COUNT(*) DESC
