@@ -1,0 +1,21 @@
+Q: https://platform.stratascratch.com/coding/9977-find-the-number-of-police-officers-firefighters-and-medical-staff-employees?tabname=solutions
+
+Sol:
+
+WITH a AS (
+    SELECT
+        CASE
+            WHEN jobtitle LIKE '%police%' THEN 'Police'
+            WHEN jobtitle LIKE '%fire%' THEN 'Firefighter'
+            WHEN jobtitle LIKE '%medical%' THEN 'Medical'
+            ELSE NULL
+        END AS job_category
+    FROM sf_public_salaries
+)
+
+SELECT
+    job_category,
+    COUNT(job_category) AS n_employees
+FROM a
+WHERE job_category IS NOT NULL
+GROUP BY job_category
