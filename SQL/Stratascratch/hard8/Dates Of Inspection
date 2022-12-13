@@ -1,0 +1,20 @@
+Q: https://platform.stratascratch.com/coding/9714-dates-of-inspection?tabname=solutions
+
+
+Sol:
+
+with cte as (select facility_name, score, activity_date, 
+lag(activity_date, 1) over(partition by facility_name order by activity_date) as previous_date, 
+rank() over(partition by facility_name order by activity_date desc) as rn 
+from 
+(select facility_name, activity_date, score, 
+rank() over(order by score desc) rnk
+from los_angeles_restaurant_health_inspections
+where (facility_name like '%restaurant%' )) s1 
+where rnk = 1)
+
+select facility_name, score, activity_date, previous_date,
+       replace(datediff(activity_date,previous_date),0,'') as diff
+from cte
+where rn=1
+order by activity_date
