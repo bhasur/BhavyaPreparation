@@ -1,0 +1,14 @@
+Q: https://platform.stratascratch.com/coding/10300-premium-vs-freemium?code_type=3
+
+
+Sol:
+
+SELECT date, 
+    SUM(IF(paying_customer = "no", downloads, 0)) AS paying,
+    SUM(IF(paying_customer = "yes", downloads, 0)) AS non_paying
+FROM ms_user_dimension
+JOIN ms_acc_dimension USING(acc_id)
+JOIN ms_download_facts USING(user_id)
+GROUP BY date
+HAVING paying > non_paying
+ORDER BY date
