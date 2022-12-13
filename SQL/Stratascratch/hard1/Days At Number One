@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/10173-days-at-number-one?code_type=3
+
+
+Sol:
+
+SELECT 
+    trackname,
+    COUNT(date) AS n_days_on_n1_position
+FROM spotify_daily_rankings_2017_us u
+JOIN spotify_worldwide_daily_song_ranking w USING(trackname, date, position) 
+WHERE u.position = 1
+GROUP BY trackname
