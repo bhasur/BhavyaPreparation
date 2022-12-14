@@ -1,0 +1,15 @@
+Q: https://platform.stratascratch.com/coding/9958-median-age-of-gold-medal-winners?code_type=3
+
+
+Sol:
+
+SELECT DISTINCT
+age
+FROM
+(SELECT
+age,
+PERCENT_RANK() OVER(ORDER BY age) AS per_rnk
+FROM olympics_athletes_events
+WHERE medal = 'Gold'
+    AND age IS NOT NULL)a
+WHERE per_rnk = 0.5
