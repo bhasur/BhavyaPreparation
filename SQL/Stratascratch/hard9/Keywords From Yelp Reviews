@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/9612-keywords-from-yelp-reviews?code_type=1
+
+
+Sol:
+
+SELECT business_name
+        ,address
+        ,state
+FROM yelp_business
+INNER JOIN yelp_reviews
+ON name = business_name
