@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/10012-advertising-channel-effectiveness?code_type=1
+
+
+Sol:
+
+SELECT 
+advertising_channel, 
+SUM(money_spent)/ SUM(customers_acquired)
+FROM 
+uber_advertising
+WHERE year IN (2017, 2018)
+GROUP BY 1
+ORDER BY 2
