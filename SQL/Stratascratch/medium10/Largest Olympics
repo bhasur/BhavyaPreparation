@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9942-largest-olympics?tabname=solutions
+
+Sol:
+
+
+select games, count(distinct id) as athletes
+from olympics_athletes_events
+group by games
+order by athletes desc
+limit 1;
