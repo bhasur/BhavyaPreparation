@@ -1,0 +1,28 @@
+Q: https://platform.stratascratch.com/coding/2038-wfm-brand-segmentation-based-on-customer-activity?code_type=5
+
+
+Sol:
+
+WITH cte AS (
+select  customer_id 
+        ,sum( sales) AS total
+        ,count(DISTiNCT transaction_id) AS cnt
+        ,store_brand
+        ,CASE WHEN AVG(sales) > 30 THEN 'HIGH'
+            WHEN AVG(sales) < 20 THEN 'LOW'
+                ELSE 'MEDIUM' END AS segment
+from wfm_transactions w
+INNER JOIN wfm_stores s
+ON w.store_id = s.store_id 
+WHERE YEAR(transaction_date) = 2017
+GROUP BY customer_id ,store_brand 
+)
+SELECT store_brand
+        , segment
+        ,SUM(cnt) total_transaction
+        ,SUM(total) AS total_sales
+        ,COUNT(customer_id) AS customer
+        ,SUM(total) / cast(SUM(cnt) as float) avg_basket
+FROM cte
+GROUP BY store_brand ,segment
+ORDER BY store_brand
