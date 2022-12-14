@@ -1,0 +1,19 @@
+Q: https://platform.stratascratch.com/coding/2088-seat-availability?tabname=solutions
+
+
+Sol:
+
+WITH cte AS
+(select  LAG(a.seat_number) OVER (ORDER BY a.seat_number) as seat1
+        , a.seat_number AS seat2
+        , seat_left 
+        , seat_right
+from theater_availability a
+INNER JOIN theater_seatmap s
+ON a.seat_number = s.seat_number
+WHERE a.is_available = 'TRUE'
+)
+
+SELECT *
+FROM cte
+WHERE seat1 = seat_left
