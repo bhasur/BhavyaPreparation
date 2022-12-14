@@ -1,0 +1,13 @@
+Q:https://platform.stratascratch.com/coding/9964-find-whether-quarterbacks-performed-better-at-home-or-away-in-2016?tabname=solutions
+
+
+
+Sol:
+
+SELECT
+qb,
+MAX(CASE WHEN home_away = 'home' THEN game_points END) AS max_home,
+MAX(CASE WHEN home_away = 'away' THEN game_points END) AS max_away
+FROM qbstats_2015_2016
+WHERE year = 2016
+GROUP BY qb
