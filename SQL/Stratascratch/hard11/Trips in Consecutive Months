@@ -1,0 +1,17 @@
+Q: https://platform.stratascratch.com/coding/2076-trips-in-consecutive-months?tabname=solutions
+
+
+Sol:
+
+WITH tab AS
+(
+	SELECT  *
+	       ,month(trip_date) AS month
+	       ,year(trip_date)  AS year
+	FROM uber_trips
+	WHERE is_completed = 1
+)
+SELECT  distinct(t1.driver_id)
+FROM tab t1
+JOIN tab t2
+ON t1.driver_id = t2.driver_id AND ((t1.month = t2.month-1 AND t1.year = t2.year) or (t1.month = 12 AND t2.month = 1 AND t1.year = t2.year-1 ))
