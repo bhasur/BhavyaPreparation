@@ -1,0 +1,16 @@
+Q: https://platform.stratascratch.com/coding/10010-find-the-combinations?tabname=solutions
+
+
+Sol:
+
+SELECT DISTINCT
+a.number,
+b.number,
+c.number
+FROM transportation_numbers a
+CROSS JOIN transportation_numbers b
+CROSS JOIN transportation_numbers c
+WHERE a.number + b.number + c.number = 8
+    AND ((a.number <> b.number) 
+    AND (a.number <> c.number)
+    AND (b.number <> c.number))
