@@ -1,0 +1,14 @@
+Q: https://platform.stratascratch.com/coding/10030-total-wine-revenue?tabname=solutions
+
+
+Sol:
+
+SELECT winery,
+       variety,
+       sum(price) AS total_revenue
+FROM winemag_p1
+GROUP BY winery,
+         variety
+HAVING min(points) >= 90
+ORDER BY winery,
+         total_revenue DESC
