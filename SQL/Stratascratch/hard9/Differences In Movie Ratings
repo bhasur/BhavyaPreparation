@@ -1,0 +1,19 @@
+Q: https://platform.stratascratch.com/coding/9606-differences-in-movie-ratings?tabname=solutions
+
+
+Sol:
+
+with cte as 
+(select
+row_number() over (partition by name order by id desc) as second,
+avg(rating) over (partition by name) as lifetime,
+* 
+from nominee_filmography
+where role_type = 'Normal Acting' and rating is not null)
+select 
+name,
+rating,
+lifetime,
+abs(rating-lifetime)
+from cte
+where second = 2
