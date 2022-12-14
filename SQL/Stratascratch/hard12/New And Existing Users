@@ -1,0 +1,23 @@
+Q: https://platform.stratascratch.com/coding/2028-new-and-existing-users?tabname=solutions
+
+
+Sol:
+
+with all_users as (
+    select extract(MONTH from time_id) as month, count(distinct user_id) as all_users
+    from fact_events
+    group by 1
+),
+new_users as (
+    select extract(MONTH from min_time) as month, count(distinct user_id) as new_users
+    from (select user_id, min(time_id) as min_time
+            from fact_events
+            group by 1) q0
+            group by 1
+)
+
+select t1.month, new_users/all_users as share_new_users,
+        1 - new_users/all_users as share_existing_users
+from all_users t1
+join new_users t2
+on t1.month = t2.month
