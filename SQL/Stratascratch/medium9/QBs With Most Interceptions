@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/9969-qbs-with-most-interceptions?tabname=solutions
+
+Sol:
+
+SELECT 
+    qb,
+    SUM(q.int) AS interceptions
+FROM qbstats_2015_2016 q
+WHERE year = 2016
+GROUP BY qb
+ORDER BY interceptions DESC
