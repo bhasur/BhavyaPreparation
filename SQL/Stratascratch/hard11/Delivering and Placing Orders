@@ -1,0 +1,7 @@
+Q: https://platform.stratascratch.com/coding/2037-delivering-and-placing-orders?tabname=solutions
+
+
+Sol:
+
+select pt1/(pt2*pt3) as corr from (select avg(x*y)-Avg(x)*Avg(y) as pt1,StDevP(x) as pt2,StDevP(y) as pt3 from (select restaurant_id,avg(order_total) as x, avg(dlvy_time) as y from (select *,datediff(ms,customer_placed_order_datetime,delivered_to_consumer_datetime) as dlvy_time from doordash_delivery) as clt
+group by restaurant_id) as clt1) as clt2;
