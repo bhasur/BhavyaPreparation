@@ -1,0 +1,18 @@
+Q: https://platform.stratascratch.com/coding/9978-find-employees-who-earned-the-highest-and-the-lowest-total-pay-without-any-benefits?tabname=solutions
+
+
+SOl:
+
+SELECT 
+    employeename,
+    totalpay
+FROM sf_public_salaries
+WHERE totalpay = 
+    (SELECT MAX(totalpay) FROM sf_public_salaries WHERE benefits IS NULL OR benefits = 0)
+UNION
+SELECT 
+    employeename,
+    totalpay
+FROM sf_public_salaries
+WHERE totalpay = 
+    (SELECT MIN(totalpay) FROM sf_public_salaries WHERE benefits IS NULL OR benefits = 0)
