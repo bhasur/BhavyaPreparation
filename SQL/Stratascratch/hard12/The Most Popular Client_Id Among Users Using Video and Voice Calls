@@ -1,0 +1,15 @@
+Q: https://platform.stratascratch.com/coding/2029-the-most-popular-client_id-among-users-using-video-and-voice-calls?tabname=solutions
+
+
+
+Sol:
+
+select client_id
+from 
+    (
+    select client_id,user_id, 
+    (sum(case when event_type  in ( 'video call received','video call sent', 'voice call received', 'voice call sent') then 1 else 0 end)/
+    count(event_type)) as ratio
+    from fact_events
+    group by 1,2 ) temp
+where ratio >0.5
