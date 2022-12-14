@@ -1,5 +1,72 @@
 Data Processing
 -----------------
-Batch Processing
-Real-Time Processing
+
+Batch Processing:
+
+
+Batch Processing : Batch processing refers to processing of high volume of data in batch within a specific time span. 
+It processes large volume of data all at once. Batch processing is used when data size is known and finite. 
+It takes little longer time to processes data. It requires dedicated staffs to handle issues. Batch processor processes data in multiple passes. 
+When data is collected overtime and similar data batched/grouped together then in that case batch processing is used. 
+
+Challenges with Batch processing :
+
+-->Debugging of these system is difficult as it requires dedicated professional to fix the error.
+-->Software and training requires high expenses initially just to understand batch scheduling, triggering, notification etc.
+
+
+
+Real-Time Processing:
+
+Real-time processing is defined as the processing of unbounded stream of input data, with very short latency requirements for processing — measured in milliseconds 
+or seconds. This incoming data typically arrives in an unstructured or semi-structured format, such as JSON, and has the same processing requirements as 
+batch processing, but with shorter turnaround times to support real-time consumption.
+
+Processed data is often written to an analytical data store, which is optimized for analytics and visualization. 
+The processed data can also be ingested directly into the analytics and reporting layer for analysis, business intelligence, and real-time dashboard visualization.
+
+Challenges
+One of the big challenges of real-time processing solutions is to ingest, process, and store messages in real time, especially at high volumes.
+Processing must be done in such a way that it does not block the ingestion pipeline. The data store must support high-volume writes. 
+Another challenge is being able to act on the data quickly, such as generating alerts in real time or presenting the data in a real-time (or near-real-time) dashboard.
+
+
 Hybrid Processing
+
+
+Hybrid data management is a process that enables enterprises to drive innovation by seamlessly sharing, accessing, and analyzing data.
+
+You need to have a hybrid data platform to achieve this level of data management,  all types of data which is present in an organization, i.e.
+
+structured, semi-structured, or unstructured should be easily accessed and analyzed adequately whether it is stored in a public cloud, on-premises, 
+in a private cloud, open-source, or in any type.
+
+Hybrid data management helps any business to enable seamless access, sharing, and analysis of all types of data, irrespective of its structure or its type
+of storage done.
+
+All these capabilities are achieved by integrating the technologies that enable a business to analyze a range of new data types and sources which includes 
+your customer data (current and past), social and web, mobile, etc. to yield new insights.
+
+A critical step toward this capability is the establishment of a data-centric foundation using Hybrid Data Management (HDM).
+
+HDM approach can scale with growing organization needs, increases agility enables innovation, improves forecasting accuracy, increases predictability, 
+detects new behavior patterns, and delivers information insights in context to old and new processes and applications.
+
+HDM also fuses traditional, and big data analytics, unstructured and structured data, data in the cloud and on-premise, partner ecosystem data, and data 
+from external sources.
+
+It also encapsulates data services as APIs. In this way, HDM plays a vital role in the digital transformation of an organization.
+
+Here are a few elements of a Hybrid Data Management Strategy:
+Access Your Data – providing easy access to all data sources and types
+Provide data-driven decisions to everyone
+Flexibility – It supports all kind of data, workloads, and models
+Better Decision making
+Cloud compatibility – It should support all type of data regardless of the location
+Data insights – Providing better analytics of the data
+Key Benefits of a Hybrid Data Management Strategy Includes:
+High-Quality Data
+Better Business Insights
+Improved Data Security
+Conclusion
+With the help of hybrid data management, various authorized users from different lines of business can securely access relevant data from any location.
