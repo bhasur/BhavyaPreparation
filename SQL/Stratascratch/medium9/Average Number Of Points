@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/9965-average-number-of-points?tabname=solutions
+
+
+Sol:
+
+SELECT
+year,
+qb,
+AVG(game_points) AS avg_points
+FROM qbstats_2015_2016
+GROUP BY qb, year
+ORDER BY year DESC
