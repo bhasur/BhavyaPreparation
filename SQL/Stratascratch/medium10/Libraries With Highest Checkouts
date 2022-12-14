@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9927-libraries-with-highest-checkouts?code_type=3
+
+
+Sol:
+
+select year_patron_registered,home_library_definition,max(total_checkouts)
+from library_usage
+where circulation_active_month='april' and year_patron_registered=2015 and age_range='65 to 74 years'
+group by 1,2
+order by 3 desc;
