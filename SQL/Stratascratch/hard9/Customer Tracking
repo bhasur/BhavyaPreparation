@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/2136-customer-tracking?tabname=solutions
+
+
+
+Sol:
+
+with tab as(select *,
+lead(timestamp) over(partition by cust_id order by timestamp) as exit
+from cust_tracking)
+
+select cust_id, sum((exit::time-timestamp::time)/3600) from tab
+where state= 1
+group by cust_id
