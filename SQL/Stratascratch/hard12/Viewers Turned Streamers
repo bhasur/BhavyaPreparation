@@ -1,0 +1,25 @@
+Q: https://platform.stratascratch.com/coding/2012-viewers-turned-streamers?tabname=solutions
+
+
+Sol:
+
+-- CTE to filter users who had first session = viewer
+
+-- Step 1: Rank user sessions
+WITH cte_1 AS(
+SELECT user_id, session_type,
+RANK() OVER (partition by user_id ORDER BY session_start) AS posn
+FROM twitch_sessions),
+
+
+-- Step 2 Get users who had first session as viewer
+cte_2 AS(
+SELECT user_id
+FROM cte_1
+WHERE posn = 1 AND session_type = 'Viewer'
+)
+
+SELECT twitch_sessions.user_id, COUNT(*) AS n_sessions
+FROM twitch_sessions, cte_2
+WHERE twitch_sessions.user_id IN (cte_2.user_id) AND session_type = 'Streamer'
+GROUP BY twitch_sessions.user_id
