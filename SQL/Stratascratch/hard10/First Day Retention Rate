@@ -1,0 +1,15 @@
+Q: https://platform.stratascratch.com/coding/2090-first-day-retention-rate?tabname=solutions
+
+
+
+Sol:
+
+WITH cte as (select player_id
+    , cast(DATEADD(day,1,login_date) as date) date
+    , LEAD(login_date) OVER (partition by player_id ORDER BY login_date ) AS next_date 
+from players_logins
+)
+
+SELECT cast(count(distinct player_id) as float) / (SELECT  count( distinct                                                  player_id) as a                                         FROM players_logins ) AS retention_rate
+FROM cte
+WHERE date = next_date
