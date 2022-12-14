@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9951-european-olympics?code_type=3
+
+
+Sol:
+
+select count(distinct id)
+from olympics_athletes_events
+where city in('berlin','athina','lillehammer','london','albertville','paris');
