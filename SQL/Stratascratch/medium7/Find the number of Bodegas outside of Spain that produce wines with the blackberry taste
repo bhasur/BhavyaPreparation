@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/10031-find-the-number-of-bodegas-outside-of-spain-by-the-country-and-region-that-produces-wines-with-the-blackberry-taste?code_type=1
+
+
+Sol:
+
+select country,region_1, count(distinct winery) as n_bodegas
+  from winemag_p1
+  where winery ilike '%bodega%'
+  and country <> 'Spain'
+  and description ilike '%blackberry%'
+  group by country, region_1
+order by n_bodegas desc
