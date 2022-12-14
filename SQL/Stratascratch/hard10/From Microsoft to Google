@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/2078-from-microsoft-to-google?tabname=solutions
+
+
+
+Sol:
+
+select count (user_id) as n_employees from(
+    select lag(employer,1) over (partition by user_id order by start_date) as position_rank, *
+
+    from linkedin_users
+    )a
+    
+where a.employer = 'Google' and a.position_rank = 'Microsoft'
