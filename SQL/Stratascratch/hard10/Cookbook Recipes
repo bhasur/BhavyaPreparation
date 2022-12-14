@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/2089-cookbook-recipes?tabname=solutions
+
+
+Sol:
+
+WITH pg(n) AS (SELECT 0 UNION ALL SELECT n+2 FROM pg WHERE n < 13)
+
+
+SELECT n left_page_number, L.title left_title, R.title right_title
+FROM pg LEFT JOIN cookbook_titles L ON pg.n = L.page_number LEFT JOIN cookbook_titles R ON pg.n = R.page_number - 1
