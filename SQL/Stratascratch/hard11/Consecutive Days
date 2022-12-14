@@ -1,0 +1,19 @@
+Q: https://platform.stratascratch.com/coding/2054-consecutive-days?tabname=solutions
+
+
+Sol:
+
+--select * from sf_events;
+
+WITH users AS 
+(
+    SELECT user_id
+        , date
+        , LAG(date) OVER (PARTITION BY user_id ORDER BY date) AS prev_date
+        , LAG(date, 2) OVER (PARTITION BY user_id ORDER BY date) AS prev2_date
+    FROM sf_events
+)
+SELECT DISTINCT user_id  
+FROM users
+WHERE DATEDIFF(d, prev_date, date) = 1 
+    AND DATEDIFF(d, prev2_date, date) = 2
