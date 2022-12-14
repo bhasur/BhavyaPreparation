@@ -1,0 +1,27 @@
+Q: https://platform.stratascratch.com/coding/2059-player-with-longest-streak?tabname=solutions
+
+
+Sol:
+
+WITH CHNG_FLAG AS 
+(
+SELECT MATCH_DATE, 
+MATCH_DATE,
+    CASE WHEN 
+        LAG(MATCH_RESULT, 1) OVER(PARTITION BY PLAYER_ID ORDER BY MATCH_DATE ) <> MATCH_RESULT 
+        THEN 1
+    END CH_FL
+FROM PLAYERS_RESULTS
+)
+,
+ GRPD AS 
+(
+SELECT * FROM 
+    (
+        SELECT *, SUM(CH_FL) OVER(PARTITION BY PLAYER_ID ORDER BY MATCH_DATE)  GRP
+        FROM CHNG_FLAG
+    ) AA
+WHERE MATCH_RESULT = 'W'
+)
+
+select * from GRPD
