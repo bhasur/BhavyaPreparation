@@ -1,0 +1,14 @@
+Q: https://platform.stratascratch.com/coding/9926-find-library-types-with-the-highest-total-checkouts-made-by-adults-registered-in-2010?code_type=3
+
+
+Sol:
+
+SELECT
+year_patron_registered,
+home_library_definition,
+MAX(total_checkouts) AS highest_check
+FROM library_usage
+WHERE patron_type_definition = 'ADULT'
+    AND year_patron_registered = 2010
+GROUP BY home_library_definition
+LIMIT 1
