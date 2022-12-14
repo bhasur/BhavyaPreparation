@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/2033-find-the-most-profitable-location?tabname=solutions
+
+
+Sol:
+
+with md as
+(select location,avg(datediff(signup_stop_date,signup_start_date)) m_d from signups group by 1),
+mr as (
+select location,avg(amt) m_r from signups join 
+transactions on signups.signup_id=transactions.signup_id group by 1)
+select md.location,m_d,m_r,m_r/m_d from md join mr on md.location=mr.location
+;
