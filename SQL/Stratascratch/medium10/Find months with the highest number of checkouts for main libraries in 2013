@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9928-find-months-with-the-highest-number-of-checkouts-for-main-libraries-in-2013?code_type=3
+
+
+Sol:
+
+select circulation_active_month,sum(total_checkouts)
+from library_usage
+where circulation_active_year=2013 and home_library_definition='main library'
+group by 1
+order by 2 desc;
