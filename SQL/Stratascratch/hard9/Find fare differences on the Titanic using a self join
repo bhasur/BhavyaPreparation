@@ -1,0 +1,13 @@
+Q: https://platform.stratascratch.com/coding/9603-find-fare-differences-on-the-titanic-using-a-self-join?tabname=solutions
+
+
+Sol:
+
+select t1.name, AVG(ABS(t1.fare-t2.fare))
+from titanic t1
+inner join    titanic t2 
+    ON t1.pclass = t2.pclass
+    AND abs(t1.age- t2.age) <= 5
+    and t1.survived+t2.survived = 0
+    and t1.passengerid != t2.passengerid
+group by t1.name
