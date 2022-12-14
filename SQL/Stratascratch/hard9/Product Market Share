@@ -1,0 +1,15 @@
+Q: https://platform.stratascratch.com/coding/2112-product-market-share?code_type=1
+
+
+Sol:
+
+select b.territory_id, c.prod_brand, count(*) as sales,
+sum(count(*)) over (partition by b.territory_id) as total_territory,
+count(*) / sum(count(*)) over (partition by b.territory_id) * 100 as market_share
+from fct_customer_sales a
+left join map_customer_territory b
+on a.cust_id = b.cust_id
+left join dim_product c 
+on a.prod_sku_id = c.prod_sku_id
+WHERE a.order_date  BETWEEN '2021-10-01' AND '2021-12-31'
+group by 1,2;
