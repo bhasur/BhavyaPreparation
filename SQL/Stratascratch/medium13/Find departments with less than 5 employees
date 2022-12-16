@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9860-find-departments-with-less-than-5-employees?tabname=solutions
+
+
+Sol:
+
+select department, count(*) from worker
+group by department
+having count(*) < 5
+
+
