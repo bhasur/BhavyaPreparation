@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/9889-find-how-many-logins-spanish-speakers-made-by-country?tabname=solutions
+
+
+Sol:
+
+select location, count(event_name)
+from playbook_events e
+join playbook_users u
+using(user_id)
+where event_name='login' and language='spanish'
+group by 1
+order by 2 desc;
