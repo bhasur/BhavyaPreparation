@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9893-duplicate-orders?tabname=solutions
+
+
+Sol:
+
+select cust_id
+from orders
+group by cust_id
+having count(cust_id) > 3
+;
