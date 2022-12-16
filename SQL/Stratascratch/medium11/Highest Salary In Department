@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9897-highest-salary-in-department?tabname=solutions
+
+
+
+Sol:
+
+select department, salary, first_name from employee
+where salary in (select max(salary) from employee group by department)
