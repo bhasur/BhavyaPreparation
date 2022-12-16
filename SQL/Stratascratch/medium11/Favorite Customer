@@ -1,0 +1,15 @@
+Q: https://platform.stratascratch.com/coding/9910-favorite-customer?tabname=solutions
+
+
+Sol:
+
+select first_name,
+       city,
+       count(o.id) as n_orders,
+       sum(total_order_cost) as sum_order_cost
+from customers as c
+join orders as o on c.id = o.cust_id
+group by cust_id,
+         first_name,
+         city
+having count(o.id) > 3 and sum(total_order_cost) > 100;
