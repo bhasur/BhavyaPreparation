@@ -1,0 +1,8 @@
+Q: https://platform.stratascratch.com/coding/9896-customers-without-orders?tabname=solutions
+
+Sol:
+
+select first_name
+from customers
+where id not in (select distinct cust_id from orders)
+;
