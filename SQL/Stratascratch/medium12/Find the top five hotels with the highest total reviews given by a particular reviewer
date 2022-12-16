@@ -1,0 +1,12 @@
+Q: https://platform.stratascratch.com/coding/9880-find-the-top-five-hotels-with-the-highest-total-reviews-given-by-a-particular-reviewer?code_type=3
+
+
+Sol:
+
+with cte as (select hotel_name, max(total_number_of_reviews_reviewer_has_given), dense_rank() over (order by max(total_number_of_reviews_reviewer_has_given) desc) as ranking
+from hotel_reviews
+group by hotel_name
+order by 2 desc)
+
+select * from cte
+where ranking <= 5;
