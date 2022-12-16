@@ -1,0 +1,9 @@
+Q: https://platform.stratascratch.com/coding/9895-duplicate-emails?tabname=solutions
+
+
+Sol:
+
+select email 
+from employee
+group by email
+having count(email) > 1;
