@@ -1,0 +1,11 @@
+Q: https://platform.stratascratch.com/coding/9890-number-of-users-events?tabname=solutions
+
+
+
+Sol:
+
+select user_id,event_name, count(event_name),avg(abs(datediff(occurred_at,activated_at))) as avg_date_diff from playbook_events
+join playbook_users
+using (user_id)
+group by user_id, event_name
+order by 1
