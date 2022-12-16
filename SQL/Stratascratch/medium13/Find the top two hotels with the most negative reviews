@@ -1,0 +1,10 @@
+Q: https://platform.stratascratch.com/coding/9876-find-the-top-ten-hotels-with-the-most-negative-reviews-in-summer-june-aug?code_type=3
+
+Sol:
+
+select hotel_name,count(negative_review)
+from hotel_reviews
+where negative_review not like 'no negative'
+group by 1
+order by 2 desc
+limit 2;
