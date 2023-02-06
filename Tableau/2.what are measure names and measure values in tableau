@@ -1,0 +1,9 @@
+When we connect any data set, tableau automatically generates some fields that contain multiple measures to create graphs that involve multiple measures. 
+"Measure Names" and "Measure Values" are one of them.
+
+
+Measure Values"
+The "Measure Value" field contains all of the measures which are present in the data set, in one field with continuous values.
+
+Measure Names"
+The "Measure Names" field contains all the names of the measures, in one field with discrete values.
