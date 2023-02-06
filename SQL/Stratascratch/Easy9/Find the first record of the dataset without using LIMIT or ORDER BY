@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9863-find-the-first-record-of-the-dataset-without-using-limit-or-order-by?code_type=3
-
-Sol:
-
-select min(worker_id),
-worker.* 
-from worker;

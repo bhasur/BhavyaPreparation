@@ -1,8 +1,0 @@
-Q: https://www.hackerrank.com/challenges/weather-observation-station-14/problem
-
-Sol: 
-
-select
-cast(max(LAT_N  ) as numeric(20,4))
-from station
-where LAT_N  <= 137.2345

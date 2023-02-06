@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9996-find-the-average-number-of-streams-across-all-songs?code_type=3
-
-
-Sol:
-
-select avg(streams) 
-from spotify_worldwide_daily_song_ranking;

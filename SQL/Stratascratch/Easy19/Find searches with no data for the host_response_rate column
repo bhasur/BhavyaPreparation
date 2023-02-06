@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9620-find-searches-with-no-data-for-the-host_response_rate-column?code_type=3
-
-
-Sol:
-
-select * 
-from airbnb_search_details
-where host_response_rate is NULL;

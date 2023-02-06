@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10139-number-of-speakers-by-language?code_type=3
-
-
-Sol:
-
-Select e.location,u.language,count(distinct e.user_id) as n_speakers
-from playbook_events e join playbook_users u
-on e.user_id=u.user_id group by 1,2 order by 1;

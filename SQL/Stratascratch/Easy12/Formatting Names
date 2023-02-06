@@ -1,7 +1,0 @@
-Q:https://platform.stratascratch.com/coding/9831-formatting-names?tabname=question
-
-
-Sol:
-
-select trim(first_name) as ltrim
-from worker;

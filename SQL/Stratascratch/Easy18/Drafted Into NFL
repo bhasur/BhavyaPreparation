@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9648-drafted-into-nfl?code_type=3
-
-
-Sol:
-
-select count(distinct name)  as n_athletes
-from nfl_combine
-where pickround <> 0
-and year = 2013;

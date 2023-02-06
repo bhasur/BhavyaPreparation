@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10020-find-prices-for-spanish-italian-and-french-wines?tabname=question
-
-Sol:
-
-select price 
-from winemag_p1
-where country in ('Spain', 'Italy','France');

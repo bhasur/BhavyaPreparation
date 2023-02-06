@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9798-find-the-average-profit-for-major-banks?code_type=3
-
-
-Sol:
-
-Select avg(profits) as average_profit
-from forbes_global_2010_2014
-where industry = 'Major Banks';

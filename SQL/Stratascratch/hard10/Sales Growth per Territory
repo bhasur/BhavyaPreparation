@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2111-sales-growth-per-territory?tabname=solutions
-
-
-Sol:
-
-SELECT territory_id, 100.0*SUM(IIF(order_date BETWEEN '2021-10-01' AND '2021-12-31',order_value,0))/SUM(IIF(order_date BETWEEN '2021-07-01' AND '2021-09-30',order_value,0))-100 sales_growth
-FROM fct_customer_sales S JOIN map_customer_territory T ON S.cust_id = T.cust_id
-GROUP BY territory_id
-HAVING SUM(IIF(order_date BETWEEN '2021-07-01' AND '2021-09-30',order_value,0)) > 0

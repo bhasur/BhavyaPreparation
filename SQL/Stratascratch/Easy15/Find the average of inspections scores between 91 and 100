@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9707-find-the-average-of-inspections-scores-between-91-and-100?code_type=3
-
-
-Sol:
-
-select avg(score) 
-from los_angeles_restaurant_health_inspections
-where score between 91 and 100;

@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10024-wine-varieties-tasted-by-roger-voss?code_type=3
-
-
-Sol:
-
-select distinct variety 
-from winemag_p2
-where taster_name = 'Roger Voss'
-and region_1 is not NULL;

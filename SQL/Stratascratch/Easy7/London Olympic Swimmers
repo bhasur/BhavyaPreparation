@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9934-london-olympic-swimmers?code_type=3
-
-
-Sol:
-
-select distinct name 
-from olympics_athletes_events
-where sport = 'swimming'
-and city = 'london';

@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9839-find-all-workers-that-work-in-the-admin-department?code_type=3
-
-Sol:
-
-select * 
-from worker
-where department = 'Admin';

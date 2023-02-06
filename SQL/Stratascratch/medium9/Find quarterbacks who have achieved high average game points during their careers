@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9961-find-quarterbacks-who-have-achieved-high-average-game-points-during-their-careers?tabname=solutions
-
-
-Sol:
-
-select qb,avg(game_points)
-from qbstats_2015_2016
-group by 1
-order by 2 desc;

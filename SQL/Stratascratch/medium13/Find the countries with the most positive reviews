@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9879-find-the-countries-with-the-most-positive-reviews?tabname=solutions
-
-Sol:
-
-select reviewer_nationality,count(positive_review)
-from hotel_reviews
-where positive_review not like 'no positive'
-group by 1
-order by 2 desc;

@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9621-find-all-searches-for-san-francisco-with-a-flexible-cancellation-policy-and-a-review-score-rating?code_type=3
-
-Sol:
-
-select * 
-from airbnb_search_details
-where city = 'SF'
-and cancellation_policy = 'flexible'
-and review_scores_rating is not NULL;

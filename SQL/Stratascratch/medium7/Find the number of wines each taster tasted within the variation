@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10028-find-the-number-of-wines-of-each-variety-that-has-been-tasted-by-each-taster?code_type=1
-
-
-Sol:
-
-select taster_name,variety, COUNT(winery) AS n_tastings
-from winemag_p2
-where taster_name <> ''
-group by taster_name, variety

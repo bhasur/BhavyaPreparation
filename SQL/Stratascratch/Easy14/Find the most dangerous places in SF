@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9749-find-the-most-dangerous-place-in-sf?code_type=3
-
-
-Sol:  
-
-select address,pd_district, count(*) as n_occurences
-from sf_crime_incidents_2014_01
-group by address,pd_district;

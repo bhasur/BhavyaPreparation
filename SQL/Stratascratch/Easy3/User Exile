@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10091-user-exile?code_type=3
-
-Sol:
-
-select count(*) 
-from facebook_friends
-where user1 != 1 and user2 != 1;

@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9615-find-out-search-details-for-apartments-designed-for-a-sole-person-stay?code_type=3
-
-
-Sol:
-
-select * 
-from airbnb_search_details
-where accommodates = 1
-and property_type = 'apartment';

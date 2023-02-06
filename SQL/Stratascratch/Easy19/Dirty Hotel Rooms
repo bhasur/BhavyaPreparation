@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9602-dirty-hotel-rooms?code_type=3
-
-
-Sol:
-
-select * 
-from hotel_reviews
-where hotel_address like '%Netherlands%'
-and negative_review like '%dirty%';

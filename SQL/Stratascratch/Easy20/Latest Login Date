@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2091-latest-login-date?code_type=3
-
-
-Sol:
-
-select player_id, max(login_date) 
-from players_logins
-group by player_id;

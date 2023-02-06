@@ -1,8 +1,0 @@
-Q:  https://platform.stratascratch.com/coding/9980-employee-with-lowest-pay?code_type=3
-
-
-Sol:
-
-select substring_index(employeename,' ',1) as first_name, totalpaybenefits from sf_public_salaries
-where otherpay > basepay
-order by 2 asc limit 1;

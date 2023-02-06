@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10120-number-of-custom-email-labels?code_type=3
-
-Sol:
-
-select e.to_user as user_id,l.label,count(distinct e.id) from google_gmail_emails e
-inner join google_gmail_labels l
-on e.id=l.email_id
-where l.label like 'Custom%'
-group by 1,2;

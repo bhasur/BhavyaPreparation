@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9973-find-job-titles-which-had-0-hours-of-overtime?code_type=3
-
-
-Sol:
-
-select distinct jobtitle
-from sf_public_salaries
-where overtimepay = 0;

@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9788-find-the-total-number-of-interactions-on-days-0-and-2?code_type=3
-
-Sol:
-
-Select day, count(user1) as n_interactions
-from facebook_user_interactions
-where day in (0,2)
-group by day;

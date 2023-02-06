@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9867-find-the-three-lowest-salaries?code_type=3
-
-
-Sol:
-
-select salary 
-from worker
-order by salary asc
-limit 3;

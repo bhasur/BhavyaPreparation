@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2011-session-type-duration?code_type=3
-
-Sol:
-
-select session_type, 
-avg(TIMESTAMPDIFF(second, session_start, session_end))
-from twitch_sessions
-group by session_type
-;

@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9834-combine-the-first-and-last-names-of-workers?code_type=3
-
-
-Sol:
-
-select concat(first_name, ' ', last_name) as full_name
-from worker;

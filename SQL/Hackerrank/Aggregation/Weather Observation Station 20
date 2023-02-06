@@ -1,8 +1,0 @@
-Q: https://www.hackerrank.com/challenges/weather-observation-station-20/problem
-
-Sol: SELECT CAST(AVG(LAT_N) AS NUMERIC(20,4)) 
-FROM (SELECT LAT_N, 
-             ROW_NUMBER() OVER (ORDER BY LAT_N ASC) AS RowAsc, 
-             ROW_NUMBER() OVER (ORDER BY LAT_N DESC) AS RowDesc 
-      FROM STATION) x
-WHERE RowAsc IN (RowDesc, RowDesc - 1, RowDesc + 1);

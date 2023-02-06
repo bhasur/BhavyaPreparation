@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9869-find-the-total-salary-of-each-department?code_type=3
-
-
-Sol:
-
-select distinct department,sum(salary)
-from worker
-group by 1;

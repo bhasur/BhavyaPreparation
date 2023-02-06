@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9925-find-how-many-people-registered-in-libraries-in-the-year-2016?code_type=5Q:
-
-
-
-Sol:
-
-select count( patron_type_code) as total_patrons
-from library_usage
-where year_patron_registered = 2016;

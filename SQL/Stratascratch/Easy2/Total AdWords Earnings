@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10164-total-adwords-earnings?code_type=3
-
-Sol:
-
-select business_type, sum(adwords_earnings) as earnings
-from google_adwords_earnings
-group by business_type;

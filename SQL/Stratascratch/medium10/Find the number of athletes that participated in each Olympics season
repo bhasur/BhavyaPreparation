@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9941-find-the-number-of-athletes-that-participated-in-each-olympics-season?code_type=3
-
-
-Sol:
-
-select distinct season, count(distinct id)
-from olympics_athletes_events
-group by 1;

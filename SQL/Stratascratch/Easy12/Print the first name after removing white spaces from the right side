@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9830-print-the-first-name-after-removing-white-spaces-from-the-right-side?code_type=3
-
-
-SOl:
-
-select trim(first_name)  as trim
-from worker;

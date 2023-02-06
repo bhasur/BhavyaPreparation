@@ -1,3 +1,0 @@
-Q: https://www.hackerrank.com/challenges/weather-observation-station-18/problem
-
-Sol: select str(abs(min(lat_n)-min(long_w)) + abs(max(lat_n)-max(long_w)), 12, 4) from station;

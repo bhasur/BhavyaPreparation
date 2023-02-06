@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9765-list-all-interactions-of-user-wth-id-4-on-either-day-0-or-2?tabname=question
-
-
-Sol:
-
-select * 
-from facebook_user_interactions
-where user1 = 4 and (day in (0,2));

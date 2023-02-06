@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9994-find-songs-with-less-than-2000-streams?code_type=3
-
-Sol:
-
-select distinct trackname, streams 
-from spotify_worldwide_daily_song_ranking
-where streams < 2000;

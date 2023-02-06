@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9894-employee-and-manager-salaries?tabname=solutions
-
-
-
-Sol:
-
-select a.first_name, a.salary
-from employee a, employee b
-where a.manager_id = b.id and a.salary > b.salary

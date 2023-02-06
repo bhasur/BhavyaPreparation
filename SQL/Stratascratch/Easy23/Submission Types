@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2002-submission-types?code_type=3
-
-
-Sol:
-
-select distinct user_id 
-from loans
-where user_id in ( select user_id from loans where type = 'Refinance')
-and user_id in ( select user_id from loans where type = 'InSchool')

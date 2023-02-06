@@ -1,8 +1,0 @@
-Q:https://platform.stratascratch.com/coding/9905-highest-target-under-manager?tabname=solutions
-
-Sol:
-
-with ctl as (select first_name, target from salesforce_employees
-where manager_id = 13)
-select first_name,target from ctl 
-where target = (select max(target) from ctl)

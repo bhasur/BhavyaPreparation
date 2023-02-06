@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9857-find-the-second-highest-salary-without-using-order-by?tabname=solutions
-
-
-Sol:
-
-select max(salary) as salary 
-from worker
-where salary <> (select max(salary) 
-from worker)

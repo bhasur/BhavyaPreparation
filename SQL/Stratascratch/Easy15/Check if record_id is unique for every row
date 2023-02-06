@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9696-check-if-record_id-is-unique-for-every-row?code_type=3
-
-
-Sol:
-
-select count(record_id) as c1, count(distinct record_id) as c2 
-from los_angeles_restaurant_health_inspections;

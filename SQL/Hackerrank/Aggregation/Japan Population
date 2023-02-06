@@ -1,3 +1,0 @@
-Q: https://www.hackerrank.com/challenges/japan-population/problem
-
-Sol: Select sum(population) from city where countrycode = 'JPN'

@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2013-customer-average-orders?code_type=3
-
-
-Sol:
-select count(distinct customer_id) ,
-avg(amount)
-from postmates_orders;

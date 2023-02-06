@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10055-records-with?code_type=3
-
-Sol:
-
-select * 
-from yelp_reviews
-where stars like '%?%';

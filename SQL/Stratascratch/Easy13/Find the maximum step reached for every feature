@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9774-find-the-maximum-step-reached-for-every-feature?code_type=3
-
-
-Sol:
-
-select feature_id , max(step_reached) as max_step_reached
-from facebook_product_features_realizations
-group by feature_id;

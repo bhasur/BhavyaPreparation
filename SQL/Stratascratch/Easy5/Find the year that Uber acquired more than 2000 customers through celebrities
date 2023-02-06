@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10000-find-the-year-that-uber-acquired-more-than-2000-customers-through-celebrities?code_type=3
-
-Sol:
-
-select year
-from uber_advertising
-where advertising_channel = 'celebrities'
-and customers_acquired > 2000;

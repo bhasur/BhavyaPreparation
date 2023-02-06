@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10283-find-the-top-ranked-songs-for-the-past-30-years?tabname=question
-
-
-Sol:
-
-select DISTINCT song_name
-from billboard_top_100_year_end
-where year_rank = 1 AND year between 2002 and 2022

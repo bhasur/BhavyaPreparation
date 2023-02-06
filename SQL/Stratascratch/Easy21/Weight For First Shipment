@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2057-weight-for-first-shipment?code_type=3
-
-
-Sol:
-
-select shipment_id, min(shipment_date), weight
-from amazon_shipment
-group by shipment_id;

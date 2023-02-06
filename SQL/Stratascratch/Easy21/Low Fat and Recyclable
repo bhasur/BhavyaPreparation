@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2067-low-fat-and-recyclable?code_type=3
-
-
-Sol:
-
-select count(case when is_low_fat='Y' and is_recyclable='Y' then product_id end)/count(*)*100
-from facebook_products;

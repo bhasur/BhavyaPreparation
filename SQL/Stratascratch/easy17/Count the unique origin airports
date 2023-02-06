@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9672-count-the-unique-origin-airports?code_type=3
-
-
-Sol:
-
-select count(distinct origin) as  n_origin_airports
-from us_flights;

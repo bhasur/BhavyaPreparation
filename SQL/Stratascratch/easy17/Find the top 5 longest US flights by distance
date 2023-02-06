@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9674-find-the-top-5-longest-us-flights-by-distance?code_type=3
-
-Sol:
-select distinct origin, dest, distance 
-from us_flights
-order by distance desc
-limit 5;

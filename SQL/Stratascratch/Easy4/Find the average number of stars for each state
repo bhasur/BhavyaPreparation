@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10052-find-the-average-number-of-stars-for-each-state?code_type=3
-
-Sol:
-
-select state, avg(stars) 
-from yelp_business
-group by state;

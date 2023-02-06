@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9974-benefits-of-employees-called-patric?code_type=3
-
-
-Sol:
-
-select employeename, benefits 
-from sf_public_salaries
-where employeename like '%patrick%';

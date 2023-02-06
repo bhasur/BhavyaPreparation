@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10006-find-the-average-distance-traveled-in-each-hour?code_type=3
-
-Sol:
-
-Select hour, 
-avg(travel_distance)  as average_distance_traveled
-from lyft_rides
-group by hour
-order by hour;

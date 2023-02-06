@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10032-best-wines-by-points-to-price?tabname=solutions
-
-
-Sol:
-
-SELECT title,points,price,(points / price) AS ratio FROM winemag_p2
-WHERE points / price >0
-ORDER BY ratio desc
-LIMIT 1

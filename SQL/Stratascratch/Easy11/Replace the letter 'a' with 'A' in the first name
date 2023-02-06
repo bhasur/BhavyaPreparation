@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9833-replace-the-letter-a-with-a-in-the-first-name?code_type=3
-
-Sol:
-
-select replace(first_name,'a','A') 
-from worker
-;

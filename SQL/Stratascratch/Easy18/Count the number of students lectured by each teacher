@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9660-count-the-number-of-students-lectured-by-each-teacher?code_type=3
-
-
-Sol:
-
-
-select teacher, count(student_id) as n_students
-from sat_scores
-group by teacher;

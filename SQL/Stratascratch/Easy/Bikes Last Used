@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10176-bikes-last-used?tabname=solutions
-
-
-Sol:
-
-select bike_number, max(end_time) as bike_last_use
-from dc_bikeshare_q1_2012
-group by bike_number
-order by end_time desc;

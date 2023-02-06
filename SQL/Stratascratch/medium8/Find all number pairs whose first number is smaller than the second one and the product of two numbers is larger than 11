@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10011-find-all-number-pairs-whose-first-number-is-smaller-than-the-second-one-and-the-product-of-two-numbers-is-larger-than-11?code_type=3
-
-
-
-Sol:
-
-select DISTINCT * FROM (SELECT number as num1 from transportation_numbers) asd
-CROSS Join (SELECT number as num2 FROM transportation_numbers) mt
-WHERE  num1 < num2 AND num1*num2>11;

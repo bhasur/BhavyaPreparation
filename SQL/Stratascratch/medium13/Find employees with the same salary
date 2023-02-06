@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?tabname=solutions
-
-
-Sol:
-
-select worker_id,first_name,salary from worker where salary = 
-(select salary from worker
-group by 1
-having count(*) > 1)

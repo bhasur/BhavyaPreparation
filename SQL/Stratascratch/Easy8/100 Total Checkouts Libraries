@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9923-100-total-checkouts-libraries?code_type=5
-
-Sol:
-
-select count(distinct home_library_definition) as cnt
-from library_usage
-where circulation_active_month = 'February'
-and circulation_active_year = 2015
-and total_checkouts >= 100;

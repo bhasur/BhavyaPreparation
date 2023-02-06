@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9963-top-10-qbs?tabname=question
-
-sol:
-
-select top 10 qb, game_points
-from qbstats_2015_2016
-where year = 2016
-order by game_points desc
-;

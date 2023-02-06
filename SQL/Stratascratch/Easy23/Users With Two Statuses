@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/2009-users-with-two-statuses?code_type=3
-
-
-Sol:
-
-select distinct b.user_id from 
-twitch_sessions as a
-inner join twitch_sessions as b
-on a.session_type != b.session_type

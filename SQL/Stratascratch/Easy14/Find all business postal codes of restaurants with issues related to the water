@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9719-find-all-business-postal-codes-of-restaurants-with-issues-related-to-the-water?code_type=3
-
-
-Sol:
-
-select distinct business_postal_code 
-from sf_restaurant_health_violations
-where violation_description like '%water%';

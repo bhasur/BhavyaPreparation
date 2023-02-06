@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9966-quarterback-with-the-longest-throw?tabname=solutions
-
-Sol:
-
-select qb, left(lg,2) as lg_num
-from qbstats_2015_2016
-where year = 2016 
-and lg in (select max(lg) from qbstats_2015_2016 where year = 2016)

@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9849-find-the-duplicate-records-in-the-dataset?tabname=solutions
-
-
-SOl:
-
-select 	worker_title,affected_from, count(*) from title
-group by worker_title, affected_from
-having count(*) >=2

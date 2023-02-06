@@ -1,7 +1,0 @@
-Q:https://platform.stratascratch.com/coding/10086-email-details-based-on-sends?tabname=question
-
-
-Sol:
-
-select * from google_gmail_emails 
-where day in (select day from google_gmail_emails group by day  having count(distinct from_user) < count(distinct to_user))

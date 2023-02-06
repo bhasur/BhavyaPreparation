@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9689-inspection-for-glassell-coffee-shop?code_type=3
-
-
-Sol:
-
-select * 
-from los_angeles_restaurant_health_inspections
-where owner_name like '%GLASSELL COFFEE SHOP LLC%';

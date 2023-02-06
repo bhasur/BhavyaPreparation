@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9757-find-the-genres-that-yielded-the-highest-sales?code_type=3
-
-Sol:
-
-select genre, sum(total) as total_sales 
-from global_weekly_charts_2013_2014
-group by genre;

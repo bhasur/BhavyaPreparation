@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10009-find-the-total-costs-and-total-customers-acquired-in-each-year?code_type=3
-
-
-Sol:
-
-select year, sum(money_spent) as total_money_spent, sum(customers_acquired) as total_customers_acquired
-from uber_advertising
-group by 1;

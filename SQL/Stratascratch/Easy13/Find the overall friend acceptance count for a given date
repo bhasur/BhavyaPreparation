@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9780-find-the-overall-friend-acceptance-count-for-a-given-date?code_type=3
-.
-
-Sol:
-
-select count(*)  as n_accepted_requests
-from facebook_friendship_requests
-where date_approved = '2019-01-02';

@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9649-count-the-number-of-accounts-used-for-logins-in-2016?code_type=3
-
-
-Sol:
-
-select count(*) as n_logins
-from product_logins
-where year(login_date) = 2016;

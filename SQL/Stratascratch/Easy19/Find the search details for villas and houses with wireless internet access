@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9619-find-the-search-details-for-villas-and-houses-with-wireless-internet-access?code_type=3
-
-
-SOl:
-
-select * 
-from airbnb_search_details
-where property_type in ('VILla', 'House')
-and amenities like '%Wireless Internet%';

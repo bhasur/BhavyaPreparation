@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/10054-find-the-number-of-entries-per-star?code_type=3
-
-
-Sol:
-select stars, count(*) as n_entries
-from yelp_reviews
-group by stars
-order by stars;

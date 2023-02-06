@@ -1,4 +1,0 @@
-Q: https://www.hackerrank.com/challenges/weather-observation-station-2/problem
-
-
-Sol: select cast(sum(lat_n) as decimal(18,2)) , cast(sum(long_w) as decimal(18,2)) from station;

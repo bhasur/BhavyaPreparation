@@ -1,9 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9911-departments-with-5-employees?code_type=3
-
-
-Sol:
-
-Select department 
-from employee
-group by department
-having count(id) > 5

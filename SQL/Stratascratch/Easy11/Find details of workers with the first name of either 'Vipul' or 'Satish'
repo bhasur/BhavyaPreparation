@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9837-find-details-of-workers-with-the-first-name-of-either-vipul-or-satish?code_type=3
-
-Sol:
-
-select * 
-from worker
-where first_name IN ('Vipul','Satish');

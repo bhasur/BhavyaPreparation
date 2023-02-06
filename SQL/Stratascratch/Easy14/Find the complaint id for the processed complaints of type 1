@@ -1,8 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9766-find-the-complaint-id-for-the-processed-complaints-of-type-1?code_type=3
-
-
-Sol:
-
-select complaint_id 
-from facebook_complaints
-where type =1 and processed = 1;

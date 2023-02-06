@@ -1,7 +1,0 @@
-Q: https://platform.stratascratch.com/coding/9842-find-all-workers-whose-first-name-contains-6-letters-and-also-ends-with-the-letter-h?code_type=3
-
-Sol:
-
-select * 
-from worker
-where length(first_name)=6 and first_name like '%h';
