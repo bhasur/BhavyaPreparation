@@ -1,0 +1,15 @@
+Tableau enables importing variety of files such as comma-separated files(csv), .xlsx(Excel file), JSON, pdf etc. 
+Tableau also provides connections to various mostly used servers and software such as Microsoft SQL Server, MySQL, Amazon Athena, Cloudera Hadoop, MongoDB, SAP Hana, etc.
+
+Tableau Provides 3 ways of importing files into it.
+Firstly, the file can be imported by using the File option in the heading and directly open the file using the open option. 
+Secondly, files can be copied and pasted using the Data option in the heading. 
+Lastly, files can be imported directly into tableau knowing the type of file, i.e., Microsoft Excel option will import .xlsx files, Text file option will import .txt files, 
+Pdf file option will import .pdf files, etc.
+
+Steps in importing Microsoft Excel File.
+Step 1 > Connect the "world_cup_results.xlsx" data set using the Microsoft Excel option.
+
+Step 2 > The file is processed in the tableau by executing queries and finally imported.
+
+The file is ready for analysis and creating visualizations!
