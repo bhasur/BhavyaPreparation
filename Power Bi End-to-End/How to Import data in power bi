@@ -1,0 +1,17 @@
+Step 1 - Ways of Importing data files
+There are 4 four from which we can import data files:
+1. we can import data from excel sheets 
+2. we can import the data from SQL server 
+3. we can directly copy and paste our data into a blank table by making a blank table 
+4. we can also use the Sample dataset provided by power bi.
+
+
+
+Step 2 - Import the data from excel sheet.
+Click on the "Import data from excel" and a new window will popped up. 
+Then go to the location where your datasets are stored and select one dataset from
+
+Step 3 - Navigation window
+After selecting the dataset click on to open and then navigation window will be opened up which will ask you which particular excel sheet 
+you have to import if you have multiple sheets in your dataset then select your particular sheet to import else if there is only one sheet then just select that sheet 
+and then click on "Load" and after some time the dataset will be loaded in your power bi software under the fields pane all the columns will appear.
