@@ -1,0 +1,14 @@
+Step 1 - Definition of Guage chart
+A Guage chat is a chart which is having a circular ARC and showing a single value that measures the progress towards a goal or a KPI i.e key performance indicator
+
+Note - We are going to use the sample dataset already present in power bi which is the Financial dataset.
+
+Step 2 - What output we are expecting?
+We want to see the gross sales in the financial data.
+
+Step 3 - Drag and drop the columns
+Drag and drop the "Gross Sales" and making some customizations use the other columns as well.
+
+Step 4 - Make a Guage chart.
+So for making a Guage chart we have to the visualization pane and from there select "Guage chart" which will convert the default chart into Guage chart, 
+for more customizations drag and drop the columns into Target, minimum and maximum fields
