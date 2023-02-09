@@ -1,0 +1,11 @@
+Step 1 - Definition of Tree map.
+It is a map in which the hierarchical data is displayed by using the nested figures mostly rectangles are used to display the data.
+
+Step 2 - What output we are expecting?
+We want to see the special attacking rate according to the type of the pokemon
+
+Step 3 - Drag and drop the columns
+Drag and drop the "Special Attack" onto the task window and do the same thing with "Type" column.
+
+Step 4 - Make a Tree map.
+So for making Tree map we have to the visualization pane and from there select "Tree map" which will convert the default chart into Tree map.
