@@ -1,0 +1,12 @@
+Step 1 - Definition of Visual filter.
+In this filter which is directly applied on individual visualization also within a visualization, 
+the filters are applied both on data and the calculations which are used in the visualization.
+
+Step 2 - What output we are expecting?
+We want to see the Country wise sales, profit and unit sold.
+
+Step 3 - Drag and drop the columns
+Drag and drop the Sales, profit, unit sold, and country onto the task window.
+
+Step 4 - Apply filter.
+Drag and drop columns into the filters pane as per requirement, for now, we are going to use the Month name column and going to apply the filter accordingly.
