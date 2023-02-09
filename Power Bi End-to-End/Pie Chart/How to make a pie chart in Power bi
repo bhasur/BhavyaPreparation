@@ -1,0 +1,25 @@
+Step 1 - Definition of Pie chart
+Pie chart is nothing but a circular graph or we can say a circular statistical graph which is divided into various slices depending upon the numerical data.
+
+Step 2 - Dataset Explaination
+The dataset that we are going to use is "Hollywood Most Profitable Stories" data. 
+There are various columns present in the dataset lets understand them. 
+Film - This column is the Film name or story name column. 
+Genre - This column tells us the type of the film or story 
+Lead studio - From which studio the film or story is coming from 
+Audience Score - Number of Audience have watched the particular film or movie in case of percentage.
+Profitability - How much profit have been gained from a particular movie or film 
+Rotten tomatoes - It is the rating or overall rating for the movie 
+Worldwide gross - It will also show the world wide ratings 
+Year - In which year the has been released.
+
+Access Movie Review Sentiment Analysis Project with Source Code
+
+Step 3 - What output we are expecting
+So we want to see profitability vs genre
+
+Step 4 - Drag and Drop the columns
+Drag and drop the genre column onto the task window and do the same thing with profitability column.
+
+Step 5 - Make the Pie chart
+So Select "Pie chart" from visualization pane which will convert your default graph into pie chart or graph. So yes our pie chart is ready.
