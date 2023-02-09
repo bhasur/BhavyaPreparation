@@ -1,0 +1,14 @@
+Step 1 - Definition of the Advance filter.
+The advanced filters can be applied in power bi if we want to see some values which are less than some particular value and also greater than this is achieved 
+by using advanced filters.
+
+Step 2 - What output we are expecting?
+We want to see the values less than 30000 and greater than 10000 for gross sales in the financial data.
+
+Step 3 - Drag and drop the columns
+Drag and drop the "Gross Sales" and "Country" onto the task window.
+
+Step 4 - Apply Filter.
+drag and drop the gross sales column onto the filter pane to add a filter and select "Advance filter" from the filter type, then in less than type enter 30000 or 
+any other as per requirement and after that in greater than enter 10000 or as per requirement and 
+click apply filter the changes will be reflected into the visualization
