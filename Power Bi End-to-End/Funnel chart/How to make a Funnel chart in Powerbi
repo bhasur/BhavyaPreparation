@@ -1,0 +1,17 @@
+Step 1 - Definition of funnel chart.
+The funnel chart is a chart that is used for visualizing the progressive reduction of the data as it is passing from one phase to the other phase. 
+In this, the representation of these phases is done as different portions of 100%.
+
+Note - Dataset that we are going to use is "Hollywood most profitable stories" data which is already used by us in our previous video so for 
+Dataset Explanation please refer to our previous video "How to Make a Pie chart in Power bi".
+
+Learn How to use XLNet for Text Classification
+
+Step 2 - What output we are expecting?
+We want to see the profitability according to the genre
+
+Step 3 - Drag and drop the columns.
+Drag and drop the profitability column onto the task window and do the same with the genre column.
+
+Step 4 - Make a funnel chart.
+Go to the visualization pane and select funnel chart and our default chart will convert to funnel chart.
