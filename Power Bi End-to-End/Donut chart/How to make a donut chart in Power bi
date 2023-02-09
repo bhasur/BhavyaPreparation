@@ -1,0 +1,15 @@
+Step 1 - Definition of Donut Chart
+Donut chart is a variation on a pie chart except in donut chart there is round hole in the center which makes it look like a donut and 
+the middle empty space can be used to display additional data or information
+
+Note - Dataset that we are going to use is "Hollywood most profitable stories" data which is already used by us in our previous video so for 
+Dataset Explanation please refer our previous video "How to make a Pie chart in Power bi".
+
+Step 2 - What output we are expecting?
+So let say we want to se "Which type of movie is been mostly watched".
+
+Step 3 - Drag and drop the columns
+Drag and drop "Audience" column onto the task window and do the same thing with "genre" column.
+
+Step 4 - Make a Donut chart.
+So after that you have to got the visualization pane and select "Donut chart" from there which will convert your default chart into donut chart.
