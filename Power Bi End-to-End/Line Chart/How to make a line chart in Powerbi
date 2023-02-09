@@ -1,0 +1,17 @@
+Step 1 - Definition of line chart
+Line chart is a chart in which the data is displayed as a series of the data points which are called the Markers and there markers are connected by a straight 
+line segments.
+
+Note - The dataset that we are going to use is "AirBnb" data in our previous video "How to make a Stacked column chart" we have given a detailed explanation 
+about the dataset.
+
+
+
+Step 2 - What output we are expecting?
+So, we want to see the "Apartment prices according to neighbourhood".
+
+Step 3 - Drag and Drop the columns
+Drag and drop the "Neighbourhood" column onto the task window and do the same thing with "Price" column
+
+Step 4 - Make line chart
+So for making line chart we have to the visualization pane and from there select "line chart" which will convert the default chart into line chart
