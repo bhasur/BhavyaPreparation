@@ -1,0 +1,17 @@
+Step 1 -What are slicers and why we need them?
+The slicers are nothing but a type of canvas visual filter which allows the user to view only the information that they want to. 
+These slicers are present as a visualization on the report and with the help of these the user can select their values for analyzing the report.
+
+Need of slicer: As we know the slicers are present on our report then they can be easily accessible for viewing the important information. 
+By placing them on to the right place on our report we can view a focused report. Instead of going to the filters always we can easily view all the currently 
+applied filters.
+
+Step 2 - Select Slicer
+Go to the visualization pane and select the slicer from there.
+
+Step 3 - Add values into Slicer
+Drag and drop the columns into the slicer, in our case we are using the Country column.
+
+Step 4 - Make a Sample visualization and apply slicer
+To see how the slicer is working make a basic visualization, let us say we want to see the gross sales month-wise and after that select, 
+a chart from the visualization pane then apply slicer values on it like if we want to see sales for particular countries so select the country from slicer and the changes will take place in the visualization
