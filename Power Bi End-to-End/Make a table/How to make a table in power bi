@@ -1,0 +1,7 @@
+Step 1 - Make a Sample visualization
+Here we are going to make a sample visualization, for that we are going to use columns Country, Gross sales, Profit, Unit sold, Year 
+which will give us a default visualization
+
+Step 2 - Select Table
+Go to the visualization pane and select a table from there which will convert our default visualization to a table and as per our requirement we can do formatting 
+to our table by using the format field under the visualization
