@@ -1,0 +1,14 @@
+Step 1 - Open power bi report
+Step 2 - Import the 'Chiclet Slicer' visual in the power bi report.
+To import 'Chiclet Slicer', go to Visualization pane -> Click on three dots -> Get more visuals -> Search 'Chiclet Slicer' -> Add 'Chiclet Slicer'
+
+Step 3 - Add the' Chiclet Slicer' visual in the power bi report.
+To add 'Chiclet Slicer', go to Visualization pane -> Drag and drop 'Chiclet Slicer' visual in power bi report.
+
+Step 4 - Add fields into the 'Chiclet Slicer' visual
+Put 'Category' in the Category field, by default Chiclet Slicer makes buttons as filters.
+
+To add Images as filters, put 'Icons' which contains Image URLs for all Categories in the Image field.
+
+In this way, we can make and use Chiclet Slicer in the power bi report.
+
