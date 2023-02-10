@@ -1,0 +1,21 @@
+Aster Plot is a twist on a standard Donut chart which is an in-built visual in power bi. There is no built-in Aster plot visualization, so we have to import it.
+
+It allows us to use 2 measures: The first measure controls the depth of each section and the Second measure controls the width of each section.
+
+Task - Make Aster plot which displays Profit(controls the depth) and Sales(controls the width) by Category.
+
+
+Step 1 - Open power bi report
+Step 2 - Import the 'Aster plot' visual in the power bi report.
+To import 'Aster plot', go to Visualization pane -> Click on three dots -> Get more visuals -> Search 'Aster plot' -> Add 'Aster plot'
+
+Step 3 - Add the 'Aster plot' visual in the power bi report.
+To add 'Aster plot', go to Visualization pane -> Drag and drop 'Aster plot' visual in power bi report.
+
+Step 4 - Add fields into the 'Aster plot' visual
+Put 'Category' in the Category field.
+
+First, put 'Profit' in the Y-Axis field and then put 'Sales' in the same field.
+
+In this way, we can make and use the Aster plot in the power bi report.
+
