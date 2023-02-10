@@ -1,0 +1,11 @@
+Step 1 - Open Power Query Editor
+Right-click on the dataset and select the edit query option. This will redirect us to Power Query Editor
+
+Step 2 - Select the Remove Duplicates option
+To remove duplicate values
+
+Home -> Remove Rows -> Remove Duplicates
+
+Step 3 - Close and apply
+It will remove all the duplicate values from the data.
+
