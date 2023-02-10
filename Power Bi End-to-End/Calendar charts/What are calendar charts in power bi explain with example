@@ -1,0 +1,20 @@
+The Calendar Visualization is used to display the distribution of values across a calendar. There is no built-in Calendar chart visualization, so we have to import it.
+
+Using this visual we can visualize a data point on each date on the calendar.
+
+Task - Make a Calendar chart that displays the sales on each date of Order Date.
+
+
+Step 1 - Open power bi report
+Step 2 - Import 'Calendar chart' visual in the power bi report.
+To import 'Calendar chart', go to Visualization pane -> Click on three dots -> Get more visuals -> Search 'Calendar Visual' -> Add 'Calendar Visual'
+
+Step 3 - Add 'Calendar chart' visual in the power bi report.
+To add 'Calendar chart', go to Visualization pane -> Drag and drop 'Calendar chart' visual in Power BI report.
+
+Step 4 - Add fields into the 'Calendar chart' visual
+Put 'Order Date' in the Category field and 'Sales' in the Y field.
+
+Insight - The cell with darker colour implies Highest sales were generated on that day.
+
+In this way, we can make and use Calendar charts in the power bi report.
