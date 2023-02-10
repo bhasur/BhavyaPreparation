@@ -1,0 +1,10 @@
+Step 1 - Open Power Query Editor
+Right-click on the dataset and select the edit query option. This will redirect us to Power Query Editor
+
+Step 2 - Select the Remove Blank Rows option
+To remove blank rows
+
+Home -> Remove Rows -> Remove Blank Rows
+
+Step 3 - Close and apply
+It will remove all the blank rows from the data.
