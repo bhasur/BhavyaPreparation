@@ -1,0 +1,8 @@
+Step 1 - Open Power Query Editor
+Right-click on the dataset and select the edit query option. This will redirect us to Power Query Editor
+
+Step 2 - Select Column
+Right-click on the column and select the Remove option
+
+Step 3 - Close and apply
+It will remove the column from the data.
