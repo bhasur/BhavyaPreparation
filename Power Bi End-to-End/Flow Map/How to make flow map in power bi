@@ -1,0 +1,11 @@
+Step 1 - Open power bi report
+Step 2 - Import 'Flow Map chart' visual in the power bi report.
+To import 'Flow Map chart', go to Visualization pane -> Click on three dots -> Get more visuals -> Search 'Flow Map chart' -> Add 'Flow Map chart'
+
+Step 3 - Add 'Flow Map chart' visual in the power bi report.
+To add 'Flow Map chart', go to Visualization pane -> Drag and drop 'Flow Map chart' visual in Power BI report.
+
+Step 4 - Add fields into the 'Flow Map chart' visual
+Put 'from' in Origin field, 'to' in Destination field and 'Product_count' in Width field.
+
+In this way, we can make and use Flow Map charts in the power bi report.
