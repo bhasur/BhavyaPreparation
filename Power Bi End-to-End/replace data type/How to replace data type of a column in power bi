@@ -1,0 +1,10 @@
+Step 1 - Open Power Query Editor
+Right-click on the dataset and select the edit query option. This will redirect us to Power Query Editor
+
+Step 2 - Select the Change Data Type option
+To replace data type
+
+Transform -> Data Type -> Change Data Type -> Select the data type
+
+Step 3 - Close and apply
+It will replace the data type of the selected column.
