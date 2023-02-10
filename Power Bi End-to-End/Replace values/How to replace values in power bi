@@ -1,0 +1,15 @@
+Our aim is to replace the 'Northeast' value with the 'NE' value in the Region column.
+
+Step 1 - Select the data for replacing
+Select the columns of the values you want to replace.
+
+Step 2 - Select the Replace Values option
+Right-click on the data set in the Fields pane, click on the edit query option. This will redirect us to Power Query Editor then follow the below steps -
+
+Transform -> Replace Values button -> Replace Values Option
+
+Step 3 - Insert Value to find(old) and value to Replace with(new)
+After you click on the Replace Values option, a small window gets open where you can replace the old value with the new value.
+
+Step 4 - Close and apply
+Click on OK in the Replace Value window, it will replace the old value with the new value. Click on the Close & Apply button in order to apply all changes.
