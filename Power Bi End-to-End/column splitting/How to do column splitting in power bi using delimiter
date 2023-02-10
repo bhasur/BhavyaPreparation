@@ -1,0 +1,15 @@
+Step 1 - What is a delimiter?
+Splitting using delimiter means we can split the columns by using delimiters which can be:
+
+"Comma" "," "Colon" ";" "Space" " " "Semi-colon" ":" "Custom" in this we can add delimiter as per our data
+
+Note - The dataset that we are going to use is the Customer details dataset which consists of two columns Customer ID and Customer Name.
+
+Step 2 - Go to the data pane
+On the left-hand side of the window, there are 3 options present select the second one which is a data pane then select the column which you want to split, right-click on it and select Edit Query which will redirect you to the Power query editor.
+
+Step 3 - Split column
+In the Power Query editor in the Home tab, there is an option available "Split Column" click onto that option and a new window will be opened up which will 
+show you the options for splitting the column, then select the delimiter by which you want to split the column in our case we are using "space" delimiter after 
+that select from where you want to split it like the "left-most", "right-most", and "Each occurrence" in our case we are selecting the "left-most".
+At last click on OK and a new column will be generated with the split values in it.
