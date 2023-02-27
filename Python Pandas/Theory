@@ -227,6 +227,37 @@ df.loc[0:5,"student_name" : "percentage"] --> displays info of the rows till the
  
  
  
+ DATA FILTERING & CONDITIONAL CHANGES
+ -------------------------------------
+ Data_frame.loc[simple_condition]
+ df.loc[df["maths"]<85] -> displayes students scored less than 85
+ 
+ Data_frame.loc[compound_condition]
+ df.loc[(df["maths"]>60) & (df["maths"]<85)] 
+ 
+ Data_frame.loc[simple_condition.str.contains(str)]
+ df.loc[df["studentname"].str.contains("n")]       -> displays the student name  which contains n
+ 
+ Data_frame.loc[simple_condition.str.startswith(str)]
+ df.loc[df["studentname"].str.startswith("n")] 
+ 
+ Data_frame.loc[simple_condition.str.endswith(str)]
+ df.loc[df["studentname"].str.endswith("n")] 
+ 
+ 
+ Export DataFrames
+ -----------------
+ Data_Frame.to_excel(PATH)
+ df.to_excel(C:\\Users\\vicky\\OneDrive\\Desktop) ---> result in excel will be with index col
+ 
+ Data_Frame.to_excel(PATH,index=False)
+ df.to_excel(C:\\Users\\vicky\\OneDrive\\Desktop, index=False)  -> result in excel without index col
+ 
+ Data_frame.to_csv(PATH)
+ df.to_excel(C:\\Users\\vicky\\OneDrive\\Desktop) ---> result in excel will be with index col
+ 
+ Data_Frame.to_csv(PATH,index=False)
+ df.to_excel(C:\\Users\\vicky\\OneDrive\\Desktop) ---> result in excel will be without index col
  
  
  
