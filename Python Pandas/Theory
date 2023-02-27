@@ -95,5 +95,53 @@ for rec in df.iterrows():
       print(rec)
 
                                                              
-  
+Understanding loc & iloc
+------------------------
+Loc -- stop index will be included,column are represented as column_name
+
+
+Syntax : data_frame.loc[row_number]
+df.loc[1] -> displays information of index 1 row
+df.loc[5] -> displays information of index 5 row
+
+Syntax: data_frame.loc[row_number,[column_name,...]]
+df.loc[1,["student_name","marks"]]               -> Displays the information of studentname and marks of index 1 row
+df.loc[3,["student_name","Roll_no","marks"]]     -> Displays the information of studentname, roll_no and marks of index 3 row
+
+Syntax: data_frame.loc[start:stop]
+df.loc[0:5]   --> displays information from index 0 to 5 rows where index 5  row is also included
+
+Syntax: data_frame.loc[start:stop,"column_name"]  
+df.loc[0:5, "student_name"] --> displays information from index 0 to 5 rows where index 5  row is also included and with column studentname
+
+Syntax: data_frame.loc[start:stop,[col1,col2,...]] 
+df.loc[0:5,["student_name", "marks"]] --> displays information from index 0 to 5 rows where index 5  row is also included and with column studentname, marks
+
+Syntax: data_frame.loc[start:stop, "col1":"coln"]
+df.loc[0:5,"student_name" : "percentage"] --> displays info of the rows till the index is 5 and columns starting student_name to percentage in between these two coloumns 
+                                              all will be displayed
+                                              
+                                              
+ iloc -- stop index will be excluded, column are represented as column_number
+ 
+ Syntax: data_frame.iloc[row_number,col_num]
+ df.iloc[0,4] -> displays the row index 0 and col index 4 it can be number or name , just shows the value of it
+ 
+ Syntax: data_frame.iloc[row_start:row_stop,col_start:col_stop]
+ df.iloc[0:5,0:3]       ->Displays the rows still index 4, displays index 3 cols 
+ 
+ Syntax: data_frame.iloc[start:stop, "col_num"]
+ df.iloc[0:3,1]     -> Displays the rows still index value is 2 and index col 1
+ 
+ Syntax: data_frame.iloc[ [row_1, row_2,...]]
+ df.iloc[[1,2,3]]  -> Displys the rows with index value 1,2,3
+ 
+ Syntax: data_frame.iloc[:,[col_1,col_2,...]]
+ df.iloc[:,[1,3,5]]      -> displays all the rows with col_num 1,3,5
+ 
+ Syntax: data_frame.iloc[start:stop,[col_1,col_2,...]]
+ df.iloc[0:7,[1,3,4,5]] -> Displys all the rows from index num 0 to 6 and col num 1,3,4,5
+ 
+ 
+ 
                                                            
