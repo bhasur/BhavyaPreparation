@@ -143,5 +143,92 @@ df.loc[0:5,"student_name" : "percentage"] --> displays info of the rows till the
  df.iloc[0:7,[1,3,4,5]] -> Displys all the rows from index num 0 to 6 and col num 1,3,4,5
  
  
+ Diff btw loc and iloc
+ ----------------------
  
+ Loc     |     iloc
+ -------------------
+ stop    |    stop
+ index   |    index
+ include |  exclude
+ --------------------
+ col_name| col_num
+ --------------------
+ 
+ 
+ 
+ Sorting dataframe
+ -----------------
+ 
+ data_frame.sort_values("col_name")
+ df.sort_values("maths") -> col sort will be done from asc to desc order
+ 
+ data_frame.sort_values("col_name",ascending=False)
+ df.sort_values("maths",ascending=False)      -> col sort will be done from desc to asc
+ 
+ data_frame.sort_values(["col_1","col_2"])
+ df.sort_values("studentname", "maths")    -> col sort will be done as studentname col_1 from asc to desc, maths col_2 will be sorted accoring to col_1
+ 
+ 
+ Manipulating dataframe
+ ----------------------
+ Adding Column
+ ---------
+ 
+ data_frame['new_col_name'] = default_value
+ df["total"] = 0           -> additional col "total"  with 0 value in all the rows
+ 
+ data_frame['new_col_name'] = expression/condition
+ df["total"] = df["telugu"] + df["maths"] + df["social"]+ df["science"]+ df["GK"]   -> give total marks of the subjects and total saved in the respective new total col
+ 
+ Removing column
+ ------------
+ Data_frame.drop(columns="col_name")
+ df.drop(columns="Total")       -> just removes the colmn temporarily
+ 
+ Data_frame.drop(columns="col_name", inplace=True)
+ df.drop(columns="total", inplace=True)  -> removes the colmn completely
+ 
+ 
+ Remove Duplicates
+ ------------------
+ 
+ Knowing Duplicates
+ ---------------
+ >Data_frame.duplicated() - boolean result if erything is false then no duplicates are found
+                                           if evrything is true or some are true then duplicate sare found
+  df.duplicated()
+ 
+ >Data_frame.drop_duplicates()        > duplicate rows will be removed, but temporarily removed
+  df.drop_duplicates()
+  
+ >Data_frame.drop_duplicates(inplace="true") > duplicate rows will be removed permanently
+ df.drop_duplicates(inplace="true")
+ 
+ 
+ 
+ Handling Missing Data
+ ---------------------
+ 
+ REMOVING MISSING DATA
+ --------------------
+ >Data_Frame.dropna()
+ df.dropna()            -> removes the rows with null values temporarily
+ 
+ >Data_frame.dropna(inplace=True)
+ df.dropna(inplace=True) -> removes   the rows with null values permanently
+ 
+ Fill WITH DEFAULT VALUES
+ -----------------------
+ >Data_Frame.fillna(Default_value)
+ df.fillna(80)     -> So the missing values  are  filled with 80
+ 
+ df["Social"].fillna(80)    -> So the missing values in Social column are filled with 80
+ 
+ 
+ 
+ 
+ 
+ 
+
                                                            
