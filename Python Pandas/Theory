@@ -80,13 +80,19 @@ df[0:10:1]   -> Displays the rows with 0th index number (while creating datafram
 df[0:10:2]   -> Displays the rows with 0th index number and ends displays till 9th index number, with 2 difference of rows, so only even rows will be displayed with 
                 index numbers 0,2,4,6,8  and 10 will not displyed becoz we need to stop at 10
                 
-Syntax: dataframe[Column_name]
+Syntax: data_frame[Column_name]
 df["marks"]  -> Displays only marks column from table
 
-Syntax: dataframe[[column_name,column_name]]
+Syntax: data_frame[[column_name,column_name]]
 df[["student_name","marks"]]    ->Displays student_name, marks column in table
 
+Syntax : data_frame[[column_name,column_name]][start:stop:step]
+df[["student_name","marks"]][0:10:2]  -> Displays student_name, marks column in table. Displays the rows with 0th index number and ends displays till 9th index number, with 2 difference of rows, so only even rows will be displayed with 
+                index numbers 0,2,4,6,8  and 10 will not displyed becoz we need to stop at 10
 
+Syntax :data_frame.iterrows()  -> Displays individual information in a tuple format
+for rec in df.iterrows():
+      print(rec)
 
                                                              
   
