@@ -1,0 +1,93 @@
+Introdution to pandas
+---------------------------
+
+> Pandas is software library which mainly used for data manipulation and analysis.
+> Pandas works in tabulated data
+> It is capable of 2-d table object called dataframe
+> pandas data structures are of 3 types -- series, dataframes and panel.
+> Series represents 1D  data
+> Dataframes represents 2D data
+> Panel represents 3D data
+
+
+Importing pandas
+----------------
+import pandas --- importing pandas module
+print(pandas.__version__) --- to know the pandas version installed on your computer
+
+
+
+Load the data from excel file
+-----------------
+
+import pandas as pd                 ---- (  here pd is an alias name for pandas)
+d = pd.read_excel("File location")   --- (note: whenever you give location of excel file in python ,\ is taken as constant So change it to \\)
+                                                                          ex: C:\Users\vicky\OneDrive\Desktop 
+                                                             change it to     C:\\Users\\vicky\\OneDrive\\Desktop   
+                                                             
+df = pd.DataFrame(d)                ---(df is a dataframe create your file will be loaded in df variable)
+                                                             
+                                                             
+Load the data from csv file
+-----------------
+
+import pandas as pd                 ---- (  here pd is an alias name for pandas)
+d = pd.read_excel("File location")   --- (note: whenever you give location of csv  file in python ,\ is taken as constant So change it to \\)
+                                                                          ex: C:\Users\vicky\OneDrive\Desktop 
+                                                             change it to     C:\\Users\\vicky\\OneDrive\\Desktop   
+                                                             
+df = pd.DataFrame(d)                ---(df is a dataframe create your file will be loaded in df variable)
+
+
+
+Creating Dataframe using dictionary
+-----------------
+
+di = {"Name":["abc","efg","hij", "Roll_No":[1,2,3], "Marks": [90,65,82]}    now dictionary table is saved in di variable
+
+df = pd.DataFrame(di)              --- now the table data into Dataframe using pandas function
+
+
+Creating Dataframe using list of tuples
+-----------------
+
+di = {"Name":["abc","efg","hij", "Roll_No":[1,2,3], "Marks": [90,65,82]}    now dictionary table is saved in di variable
+
+df = pd.DataFrame(di)              --- now the table data into Dataframe using pandas function
+
+
+Indexing & Slicing
+------------------
+Syntax: data_frame.head(no_of_rows)
+df.head()  -> displays the top 5 rows
+df.head(2) -> displays the first 2 rows
+df.head(10) -> displays first 10 rows
+
+Syntax: data_frame.tail(no_of_rows)
+df.tail()  -> displays last 5 rows
+df.tail(2) -> displays last 2 rows
+df.tail(10) -> displays last  10 rows
+
+Syntax: data_frame.describe()
+df.describe() -> gives information of each every coulmn count, mean, max, min, 25%,50%,75% and etc
+
+Syntax: data_frame.shape()
+df.shape()  -> gives information about rows and columns result would be 20, 7 (means 20 rows 7 coulmns)
+
+Syntax: data_frame[start:stop:step]
+df[0:10:1]   -> Displays the rows with 0th index number (while creating dataframe the additional column will be added  starting with 0) and ends displays till 
+                9th index number, with 1 difference of rows , so all the 1st 10 rows will be displayed
+df[0:10:2]   -> Displays the rows with 0th index number and ends displays till 9th index number, with 2 difference of rows, so only even rows will be displayed with 
+                index numbers 0,2,4,6,8  and 10 will not displyed becoz we need to stop at 10
+                
+Syntax: dataframe[Column_name]
+df["marks"]  -> Displays only marks column from table
+
+Syntax: dataframe[[column_name,column_name]]
+df[["student_name","marks"]]    ->Displays student_name, marks column in table
+
+
+
+                                                             
+  
+                                                           
