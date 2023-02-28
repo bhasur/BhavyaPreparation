@@ -1,0 +1,21 @@
+Step 1 - Import the library
+
+import pandas as pd  (Let's pause and look at these imports. Pandas is generally used for data manipulation and analysis.)
+
+
+Step 2 - Setup the Data
+
+Studentstable =  {"Name":["RAM","SITA","Bharath","leela"],
+                  "Marks":[90,85,70,65]}
+
+(Let us create a simple dataset and store it in the form of dictionary.)
+
+Step 3 - Converting Dataset to Dataframe
+(Now we simply use pandas library imported earlier to covert the dataset to Dataframe)
+
+
+df=pd.DataFrame(Studentstable,columns=["Name","Marks"])
+
+Step 4 - Printing Dataframe
+
+print(df)
