@@ -1,0 +1,15 @@
+import pandas as pd
+
+data = [['geek',12], ['is',14],['for',18]]
+
+df = pd.DataFrame(data, columns = ['tag','age'])
+
+print(df)
+
+
+Sol:
+
+    tag  age
+0  geek   12
+1    is   14
+2   for   18
