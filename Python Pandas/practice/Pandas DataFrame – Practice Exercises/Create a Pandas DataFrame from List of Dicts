@@ -1,0 +1,14 @@
+import pandas as pd
+
+data = [{'Geeks':'Dataframe','for':'Series','people':'Lists'},
+        {'Geeks':19,'for':25,'people':40}]
+
+df  = pd.DataFrame.from_dict(data)
+
+print(df)
+
+Sol:
+
+       Geeks     for people
+0  Dataframe  Series  Lists
+1         19      25     40
