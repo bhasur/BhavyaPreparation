@@ -1,0 +1,15 @@
+import pandas as pd
+
+data = [('Amber',13, 99),('Head',12,89),('Bhavya',14,92)]
+
+df=pd.DataFrame(data,columns=['Names','Age','Marks'])
+
+print(df)
+
+
+Sol:
+
+    Names  Age  Marks
+0   Amber   13     99
+1    Head   12     89
+2  Bhavya   14     92
