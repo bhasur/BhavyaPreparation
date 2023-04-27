@@ -1,8 +1,0 @@
-Step 1 - Select Slicer
-Go to the visualization pane and select the slicer to drag it onto the task window.
-
-Step 2 - Drag a numeric value.
-From the columns select a numeric value column and drag it to the slicer, in our case we are using the gross sales column
-
-Step 3 - Make a Sample visualization
-In our case, we are going to make a profit vs product and Unit sold vs product, so when we apply slicer on it the changes were taking place.
